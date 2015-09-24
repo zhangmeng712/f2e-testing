@@ -52,6 +52,9 @@ F2e Testing Technology Collection
 
 
 ## Mobile UI Testing Demo
+- <a href="ui-wd-tests/mobile/safari-wd-search-test.js">wd.js safari test demo</a>
+- <a>wd.js webview test demo</a>
+- <a>wd.js gestures support</a>
 - IOS App login Page testing
 - Mobile Ads testing
 

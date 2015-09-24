@@ -1,0 +1,10 @@
+{
+  "name": "wd.js-test-demos",
+  "version": "0.0.1",
+  "devDependencies": {
+    "chai": "",
+    "chai-as-promised": "",
+    "wd": "",
+    "colors": ""
+  }
+}
