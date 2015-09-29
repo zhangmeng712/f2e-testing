@@ -19,7 +19,8 @@ driver
     .title().then(function (title){
         console.log('this is the website title', title)
     })
-    .quit();
+    .quit()
+    .done();
 
 
 
