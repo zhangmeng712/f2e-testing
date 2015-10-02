@@ -24,20 +24,34 @@ var codeUrl = '/opt/local/share/nginx/html/my-git/f2e-testing/ui-wd-tests/script
 //加载jquery等类库
 var loadUrl = '/opt/local/share/nginx/html/my-git/f2e-testing/ui-wd-tests/scripts/load.js';
 
+var loadKISSYUrl = '/opt/local/share/nginx/html/my-git/f2e-testing/ui-wd-tests/scripts/loadKISSYModule.js';
+
 var executeStr = jsFileToString(codeUrl);
 var loadScriptStr = jsFileToString(loadUrl);
+var loadKISSYStr = jsFileToString(loadKISSYUrl);
 
 browser
-      .init({browserName:'safari'})
+      .init({browserName:'chrome'})
       .get('http://localhost:63342/my-git/f2e-testing/ui-wd-tests/test.html')
-      .sleep(1000)
-      .execute(loadScriptStr)
-      .sleep(2000)
+      .setAsyncScriptTimeout(30000)
+      .executeAsync(loadScriptStr, ["//g.alicdn.com/kissy/k/1.4.8/seed-min.js"])
+      .executeAsync(loadKISSYStr, [['node']])
       .execute(executeStr)
-      .execute('Fn.appendChild', [1000])
-      .sleep(2000)
-      .execute('Fn.removeChildren()')
+      .execute('Fn.appendKISSYNode()', [])
       .sleep(2000)
       .fin(function() { return browser.quit(); })
       .done();
+
+
+
+      //.sleep(2000)
+      //.execute(executeStr)
+      //.execute('Fn.appendChild', [1000])
+      //.sleep(2000)
+      //.execute('Fn.removeChildren()')
+      //.sleep(2000)
+      //.fin(function() { return browser.quit(); })
+      //.done();
+
+
 
