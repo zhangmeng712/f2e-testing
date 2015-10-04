@@ -15,7 +15,6 @@ var appendKISSYNode = function () {
     //    $("#i_am_an_id").append('<div class="child">I am the child</div>');
     //});
     var $ = KISSY.Node.all;
-    console.log('34',$)
     $("#i_am_an_id").append('<div class="child">I am the child</div>');
 };
 
