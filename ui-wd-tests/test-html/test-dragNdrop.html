@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>wd-测试页面</title>
+    <script src="//cdn.bootcss.com/jquery/1.10.2/jquery.js"></script>
+    <script src="//cdn.bootcss.com/jqueryui/1.11.4/jquery-ui.js"></script>
+    <style>
+        .section {
+            border: 1px solid #ffeeee;
+            padding: 20px;
+            margin:20px;
+        }
+        .dragable {
+            width: 100px;
+            height: 100px;
+            padding: 0.5em;
+            float: left;
+            margin: 10px 10px 10px 0;
+            border: 1px solid #aaaaaa;
+            cursor: pointer;
+        }
+        .dropable {
+            width: 150px;
+            height: 150px;
+            padding: 0.5em;
+            float: left;
+            margin: 10px;
+            border: 1px solid #aaaaaa;
+            background-color: #ffe0cc;
+            cursor: pointer;
+        }
+        .clearfix {
+            *zoom: 1;
+        }
+        .clearfix:before,
+        .clearfix:after {
+            display: table;
+            content: "";
+        }
+        .clearfix:after {
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+<div class="section clearfix">
+    <h2>测试拖拽功能</h2>
+    <div class="dragable">dragable</div>
+    <div class="dropable"><p>dropable</p></div>
+</div>
+<script>
+    $(function() {
+        $( ".dragable" ).draggable();
+        $( ".dropable" ).droppable({
+            drop: function( event, ui ) {
+                $( this )
+                        .addClass( "ui-state-highlight" )
+                        .find( "p" )
+                        .html( "Dropped!" );
+            }
+        });
+    });
+</script>
+</body>
+</html>

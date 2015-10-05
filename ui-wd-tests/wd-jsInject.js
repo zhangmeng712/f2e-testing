@@ -32,7 +32,7 @@ var loadKISSYStr = jsFileToString(loadKISSYUrl);
 
 browser
       .init({browserName:'chrome'})
-      .get('http://localhost:63342/my-git/f2e-testing/ui-wd-tests/test.html')
+      .get('http://localhost:63342/my-git/f2e-testing/ui-wd-tests/test-html/test-injectjs.html')
 
       //inject kissy loader
       //.setAsyncScriptTimeout(30000)
@@ -48,7 +48,6 @@ browser
       //inject jquery
       .setAsyncScriptTimeout(30000)
       .executeAsync(loadScriptStr, ["//cdn.bootcss.com/jquery/2.1.4/jquery.js"])
-      .sleep(2000)
       .execute(executeStr)
       .execute('Fn.appendChild', [1000])
       .sleep(2000)
