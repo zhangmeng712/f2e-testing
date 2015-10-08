@@ -47,10 +47,8 @@ var customTextNonEmpty = new Asserter(
 var tableHasBeenLoaded = new Asserter(
     function(browser, cb) {
         var jsConditionExpr = '($("#tbody tr").length > 0) ? true: false';
-        var jsConditionExpr = 'window.$.active';
         var _eval = browser.eval;
         _eval.apply( browser , [jsConditionExpr, function(err, res) {
-            console.log(3333, res)
             if(err) {return cb(err);}
             cb(null, res, res);
         }]);
@@ -80,7 +78,7 @@ browser
 
     //------------- case2 jsCondition  waitForConditionInBrowser new Asserter waitForAjaxLoaded -----
     .elementByCss('#getBtn')
-    .click()
+    .click() //click to trigger ajaxloading
 
     //method1：
     //.waitFor(asserters.jsCondition('($("#tbody tr").length > 0) ? true: false'),3000)
