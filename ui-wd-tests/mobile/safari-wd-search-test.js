@@ -22,7 +22,6 @@ describe('test page of taobao search', function () {
         return driver.quit();
     });
 
-
     //1打开淘宝搜索页面
     //2点击搜索框
     //3进入到搜索结果页面

@@ -47,7 +47,7 @@ var customTextNonEmpty = new Asserter(
 var tableHasBeenLoaded = new Asserter(
     function(browser, cb) {
         var jsConditionExpr = '($("#tbody tr").length > 0) ? true: false';
-        var _eval = browser.eval;
+        var _eval = browser.eval;//防止某些浏览器吞掉异常，使用browser.safeEval
         _eval.apply( browser , [jsConditionExpr, function(err, res) {
             if(err) {return cb(err);}
             cb(null, res, res);
