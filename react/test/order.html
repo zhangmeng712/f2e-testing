@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>A test bed page for our Order Passive view</title>
+    <!--<link href="/static/css/order.css" type="text/css" rel="stylesheet">-->
+    <!--<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>-->
+</head>
+<body>
+<!-- To be used by injected scripts, normal in browser distribution -->
+<script src="/node_modules/sinon/pkg/sinon.js"></script>
+<script src="/node_modules/chai/chai.js"></script>
+<script src="/node_modules/sinon-chai/lib/sinon-chai.js"></script>
+<script>expect = chai.expect;</script>
+<!-- To be used by common js bundles -->
+<script src="/dist/react.js"></script>
+<script src="/dist/order-view.js"></script>
+<!-- Some markup needed in our test-->
+<div class="not-a-container"></div>
+<div class="container"></div>
+<div class="not-a-container-either"></div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "name": "mycafe-ui",
+  "version": "0.1.0",
+  "description": "A sample project for testing the UI using wd.js",
+  "scripts": {
+    "test": "mocha -u bdd -R spec -t 5000 --recursive"
+  },
+  "author": "Enrique Amodeo",
+  "license": "MIT",
+  "devDependencies": {
+    "browserify": "",
+    "express": "",
+    "react": "^0.13.3",
+    "reactify": "^1.0.0",
+    "wd": "",
+    "chai": "",
+    "chai-as-promised": "",
+    "sinon": "",
+    "sinon-chai": "",
+    "colors": ""
+  }
+}
