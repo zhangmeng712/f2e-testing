@@ -30,14 +30,14 @@ npm install -g grunt-cli
 ```shell
 # ~/.bash_profile的配置内容
 # 修改完之后source ~/.bash_profile生效
-```
+
 export ANDROID_HOME=/Users/zhangmeng/Documents/adt-bundle-mac-x86_64-20131030/sdk
 export PATH=/Users/zhangmeng/Documents/adt-bundle-mac-x86_64-20131030/sdk/platform-tools:$PATH
 export PATH=/Users/zhangmeng/Documents/adt-bundle-mac-x86_64-20131030/sdk/tools:$PATH
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home
 export PATH=$JAVA_HOME/bin:$PATH
-
 ```
+
 ![](http://gtms04.alicdn.com/tps/i4/TB1d.8kKXXXXXXFaXXXHH2ZNpXX-822-195.jpg)
 
 ### 配置手机
@@ -47,7 +47,7 @@ export PATH=$JAVA_HOME/bin:$PATH
 - 部分手机需要在 连接USB的时候选用 MTP媒体模式才会生效
 - 在命令行执行如下指令，能够列出后（如果不行, 重新插拔一下usb，还可以尝试<a href="https://nishantverma.gitbooks.io/appium-for-android/content/executing_test_on_real_devices/index.html">方法</a>）
 
-![](http://gtms02.alicdn.com/tps/i2/TB1Fb0vKXXXXXXeXVXXeOeo8FXX-750-1000.jpg)
+<img src="http://gtms02.alicdn.com/tps/i2/TB1Fb0vKXXXXXXeXVXXeOeo8FXX-750-1000.jpg" width="300px" height="500px">
 
 ```shell
 adb kill-server
@@ -61,14 +61,13 @@ adb devices
 
 按照上面的步骤执行完成之后，运行命令./reset.sh --andorid --verbose即可。
 在没有读这个reset.sh脚本的时候真的是被各种的环境搞的头晕脑胀，各种报错，包括：
-基本都是有命令运行不通造成的，所以在这里大概介绍一下在appium reset android中的到底做了些什么，帮助大家理解这个启动脚本，以便配合自己的应用解决编译的问题，
-这个也是源码编译的好处之一，可以及时的解决更新服务。
+基本都是有命令运行不通造成的，所以在这里大概介绍一下在appium reset android中的到底做了些什么，帮助大家理解这个启动脚本，以便配合自己的应用解决编译的问题，这个也是源码编译的好处之一，可以及时的解决更新服务。
 
 - android API 不匹配
 - Device chrome not configured yet
 - uninstall io.appium.android.ime卡住不再运行
 
-![](http://gtms03.alicdn.com/tps/i3/TB1WaXHKXXXXXb6XpXXeOeo8FXX-750-1000.jpg)
+<img src="http://gtms03.alicdn.com/tps/i3/TB1WaXHKXXXXXb6XpXXeOeo8FXX-750-1000.jpg" width="300px" height="500px">
 
 ### reset.sh分析
 
