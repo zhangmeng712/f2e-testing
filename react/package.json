@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "A sample project for testing the UI using wd.js",
   "scripts": {
+    "start": "node server.js",
     "test": "mocha -u bdd -R spec -t 5000 --recursive"
   },
   "author": "Enrique Amodeo",

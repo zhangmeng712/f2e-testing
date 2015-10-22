@@ -4,20 +4,50 @@
     <meta charset="UTF-8">
     <title>A test bed page for our Order Passive view</title>
     <!--<link href="/static/css/order.css" type="text/css" rel="stylesheet">-->
-    <!--<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>-->
+    <!-- To be used by injected scripts, normal in browser distribution -->
+    <script src="/node_modules/sinon/pkg/sinon.js"></script>
+    <script src="/node_modules/chai/chai.js"></script>
+    <script src="/node_modules/sinon-chai/lib/sinon-chai.js"></script>
+    <script>expect = chai.expect;</script>
+    <!-- To be used by common js bundles -->
+    <script src="/dist/react.js"></script>
+    <script src="/dist/order-view.js"></script>
 </head>
 <body>
-<!-- To be used by injected scripts, normal in browser distribution -->
-<script src="/node_modules/sinon/pkg/sinon.js"></script>
-<script src="/node_modules/chai/chai.js"></script>
-<script src="/node_modules/sinon-chai/lib/sinon-chai.js"></script>
-<script>expect = chai.expect;</script>
-<!-- To be used by common js bundles -->
-<script src="/dist/react.js"></script>
-<script src="/dist/order-view.js"></script>
 <!-- Some markup needed in our test-->
 <div class="not-a-container"></div>
 <div class="container"></div>
 <div class="not-a-container-either"></div>
+<script>
+//    var OrderView = require('order-view');
+//    var viewInstance = OrderView('.container', {
+//        addBeverage: function (e) {
+//            alert('传入回调给formsubmit')
+//            debugger
+//        }
+//    });
+//    viewInstance.update({
+//        totalPrice: '$24',
+//        items: [{
+//            name: 'coffee',
+//            quantity: '2',
+//            unitPrice: '$12'
+//        }],
+//        addBeverageForm: {
+//            target: '/orders/items_3',
+//            method: 'POST',
+//            enabled: true,
+//            shown: true,
+//            fields: [
+//                {name: '__method', type: 'hidden', value: 'PUT'},
+//                {name: 'beverage', type: 'text', value: '', error: true},
+//                {name: 'quantity', type: 'text', value: '1', error: false},
+//                {name: 'addToOrder', type: 'submit', value: 'Add to order'}
+//            ],
+//            messages: ['name of the beverage is required']
+//        }
+//    });
+</script>
+
 </body>
 </html>

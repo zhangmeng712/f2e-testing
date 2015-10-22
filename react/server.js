@@ -39,7 +39,8 @@ function bundleOrderView(cb) {
         .exclude('react')
         .bundle(registerBundle('order-view', cb));
 }
-
+//编译react
+//编译reactcomponents
 Q.all([
     bundleReact(),
     bundleOrderView()

@@ -100,6 +100,7 @@ Appium最大的特色就是<strong>支持ios/android/firefoxos多种平台的测
 	node . --safari
 ```
 
+详细的Appium的配置和源码分析见 <a href="https://github.com/zhangmeng712/f2e-testing/blob/master/ui-wd-tests/mobile/appium.md" target="_blank">appium.md</a>
 
 ### selenium-standalone
 
