@@ -5,12 +5,10 @@
 
 var orderView = require('order-view');
 var React = require('react');
-var view = orderView('.container', {
-    addBeverage: function () {
-        console.log(arguments)
-        console.log('this is addBaverage');//submit事件
-    }
-});
+window.controller = {
+    addBeverage: sinon.spy()
+};
+var view = orderView('.container', window.controller);
 var items = [];
 var totalPrice = '0 $';
 var calCulateTotal = function (totalPrice, items) {

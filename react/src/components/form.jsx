@@ -39,6 +39,7 @@ module.exports = React.createClass({
               name = 'method';
             formData[name] = inputValue;
           }, this);
+        console.log('erwr', formData)
       this.props.onSubmit(formData);
     }
   },

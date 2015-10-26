@@ -9,6 +9,7 @@ var desired = Setup.desired;
 var serverConfig = Setup.serverConfig || {};
 var should = Setup.should;
 var driver;
+var Q = wd.Q;
 
 
 var getScriptStr = function (path) {
@@ -42,30 +43,74 @@ describe('order-view can ends ans "add beverage" request to the controller', fun
         //Logger.configure(driver);//显示wd日志
         return driver
             .get("http://localhost:3000/test/order.html")
-            .execute(getScriptStr(prepare_script_path), [addBeverageForm]);
+            .executeAsync(getScriptStr(prepare_script_path), [addBeverageForm]);
     });
-
-
-
 
     after(function() {
-       // return driver.quit();
+        return driver.quit();
     });
 
 
-
-    //
-    //it('the server is correctly set up', function () {
-    //    return driver.title().should.become("A test bed page for our Order Passive view");
-    //});
-
     function willSubmitForm(example) {
-        var beverage = '';
-        var quantity = '';
+        var enteredBeverage = example.input.beverage,
+            enteredQuantity = example.input.quantity;
+        describe('given that the user has entered ' + example.title, function () {
+            var expectedRequest = {
+                beverage: enteredBeverage,
+                quantity: enteredQuantity,
+                target: '/orders/items_2',
+                method: 'PUT'
+            };
+            beforeEach(function () {
+                return driver.waitForElementByCssSelector('.container .order form.add-beverage input[name="beverage"]').sendKeys(enteredBeverage).waitForElementByCssSelector('.container .order form.add-beverage input[name="quantity"]').sendKeys(enteredQuantity);
+            });
+            afterEach(function () {
+                return driver.elementByCss('.container .order form.add-beverage input[name="beverage"]').clear().elementByCss('.container .order form.add-beverage input[name="quantity"]').clear().execute('controller.addBeverage.reset();');
+            });
+
+            it('when the user clicks the "add to order" button, ' +
+            'an addBeverage request will be sent to the order with "' + example.title + '"', function () {
+               return driver.waitForElementByCssSelector('.container .order form.add-beverage input[name="addToOrder"]').click().execute('expect(controller.addBeverage).to.have.been.calledWith(arguments[0]);',[expectedRequest])
+            });
+
+
+            ['beverage', 'quantity'].forEach(function (fieldName) {
+                it('when the user press ENTER in the "' + fieldName + '" input, ' +
+                'an addBeverage request will be sent to the order with "' + example.title + '"', function () {
+                    return driver.waitForElementByCssSelector('.container .order form.add-beverage input[name="' + fieldName + '"]')
+                                 .sendKeys(wd.SPECIAL_KEYS.Enter)
+                                 .execute('expect(controller.addBeverage).to.have.been.calledWith(arguments[0]);',[expectedRequest])
+                });
+            });
+
+        });
     }
 
+    [
+        {
+            title: '2 Capuccinos',
+            input: {
+                beverage: 'Cappuccino',
+                quantity: '2'
+            }
+        }
+        ,
+        {
+            title: '12 Expressos',
+            input: {
+                beverage: 'Expresso',
+                quantity: '12'
+            }
+        },
+        {
+            title: 'nothing',
+            input: {
+                beverage: ' ',
+                quantity: ' '
+            }
+        }
+    ].forEach(willSubmitForm);
 
 
 
-
-})
+});
