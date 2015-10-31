@@ -16,11 +16,13 @@ exports.firefox = {
 exports.ios90s = {
     'browserName': 'Safari',
     'appiumVersion': '1.4.11',
-    'deviceName': 'iPhone 6',
-    'device-orientation': 'portrait',
-    'platformVersion': '9.0',
+    //'deviceName': 'iPhone 6',
+    //'device-orientation': 'portrait',
+    'platformVersion': '9.1',
     'platformName': 'iOS',
     'app': 'safari',
-     noReset: true//不重建session提升速度
+    deviceName:"iPad Air"
+    //,
+    // noReset: true//不重建session提升速度
 };
 //TO SETUP other platformVersion in new place
