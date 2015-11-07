@@ -1,8 +1,8 @@
 {
   "tests" : [ {
     "name" : "Welcome page on desktop chrome device",
-    "startedAt" : 1446188657782,
-    "endedAt" : 1446188664539,
+    "startedAt" : 1446822992750,
+    "endedAt" : 1446823004365,
     "failed" : false,
     "statistic" : {
       "passed" : 49,
@@ -13,36 +13,21 @@
     "testId" : "1-welcome-page-on-desktop-chrome-device",
     "groups" : [ ],
     "failed" : false,
-    "duration" : 6757
+    "duration" : 11615
   }, {
-    "name" : "Welcome page on Android chrome device",
-    "startedAt" : 1446188665107,
-    "endedAt" : 1446188696348,
-    "failed" : false,
-    "statistic" : {
-      "passed" : 35,
-      "errors" : 0,
-      "warnings" : 0,
-      "total" : 35
-    },
-    "testId" : "2-welcome-page-on-android-chrome-device",
-    "groups" : [ ],
-    "failed" : false,
-    "duration" : 31241
-  }, {
-    "name" : "Welcome page on ipad Air safari device",
-    "startedAt" : 1446188698104,
-    "endedAt" : 1446188719746,
+    "name" : "Menu Highlight on desktop chrome device",
+    "startedAt" : 1446823004937,
+    "endedAt" : 1446823013737,
     "failed" : true,
     "statistic" : {
-      "passed" : 45,
+      "passed" : 2,
       "errors" : 2,
       "warnings" : 0,
-      "total" : 47
+      "total" : 4
     },
-    "testId" : "3-welcome-page-on-ipad-air-safari-device",
+    "testId" : "2-menu-highlight-on-desktop-chrome-device",
     "groups" : [ ],
     "failed" : true,
-    "duration" : 21642
+    "duration" : 8800
   } ]
 }

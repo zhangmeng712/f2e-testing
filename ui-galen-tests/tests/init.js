@@ -9,7 +9,7 @@ var devices = {
         tags: 'desktop',
         deviceName: 'desktop chrome',
         getDriver: function () {
-            return createGridDriver('http://127.0.0.1:4444/wd/hub',{
+            return createGridDriver('http://0.0.0.0:4444/wd/hub',{
                 desiredCapabilities: {
                     browserName: 'chrome',
                     size: '1100x800'
@@ -17,41 +17,41 @@ var devices = {
             })
         }
     }
-    ,
-    mobile: {
-        tags: 'mobile',
-        deviceName: 'Android chrome',
-        getDriver: function () {
-            return createGridDriver('http://127.0.0.1:8002/wd/hub',{
-                desiredCapabilities: {
-                    platformName: 'Android',
-                    platformVersion: '4.4.4',
-                    deviceName: 'Sumsung'
-                }
-            })
-        }
-    },
+    //,
+    //mobile: {
+    //    tags: 'mobile',
+    //    deviceName: 'Android chrome',
+    //    getDriver: function () {
+    //        return createGridDriver('http://127.0.0.1:8002/wd/hub',{
+    //            desiredCapabilities: {
+    //                platformName: 'Android',
+    //                platformVersion: '4.4.4',
+    //                deviceName: 'Sumsung'
+    //            }
+    //        })
+    //    }
+    //},
     //有时appium在ios下会出现无法打开url的情况(考虑有可能跟异步有关系，无法次次复现)，safari的app id 无法正常初始化造成 暂无办法解决，wd.js不会出现这个问题
     //New page listing did not match the app id we are currently using, ignoring
     //https://github.com/appium/appium/issues/4865
     //等读完appium源码的时候解决
-    tablet: {
-        tags: 'tablet',
-        deviceName: 'ipad Air safari',
-        getDriver: function () {
-            return createGridDriver('http://127.0.0.1:8001/wd/hub',{
-                desiredCapabilities: {
-                    browserName: 'Safari',
-                    'platformVersion': '9.1',
-                    'platformName': 'iOS',
-                    'app': 'safari',
-                     deviceName:"iPad Air",
-                     size: '600x800',
-                     safariInitialUrl: 'about:blank'
-                }
-            })
-        }
-    }
+    //tablet: {
+    //    tags: 'tablet',
+    //    deviceName: 'ipad Air safari',
+    //    getDriver: function () {
+    //        return createGridDriver('http://127.0.0.1:8001/wd/hub',{
+    //            desiredCapabilities: {
+    //                browserName: 'Safari',
+    //                'platformVersion': '9.1',
+    //                'platformName': 'iOS',
+    //                'app': 'safari',
+    //                 deviceName:"iPad Air",
+    //                 size: '600x800',
+    //                 safariInitialUrl: 'about:blank'
+    //            }
+    //        })
+    //    }
+    //}
 
 };
 
@@ -59,7 +59,7 @@ var devices = {
 var domain = 'testapp.galenframework.com';
 var openDriver = function (device, url) {
     var driver = device.getDriver();
-    session.put("driver", driver);//保留登陆的session
+    session.put("driver", driver);
     if (url != null) {
         if (url.indexOf("http://") != 0 && url.indexOf("https://") != 0) {
             url = "http://" + domain + url;
@@ -82,7 +82,9 @@ afterTest(function (test) {
     }
 });
 
-
+/**
+ * 调用多种设备
+ */
 var testOnAllDevices = function(testNamePrefix, url, callback) {
     forAll(devices, function (device) {
        test(testNamePrefix + " on ${deviceName} device", function (device) {
@@ -92,9 +94,22 @@ var testOnAllDevices = function(testNamePrefix, url, callback) {
     });
 };
 
+/**
+ * 只调用单一设备
+ */
+var testOnDevice = function(device, testNamePrefix, url, callback) {
+    forOnly(device, function(device) {
+        test(testNamePrefix + " on ${deviceName} device", function (device) {
+            var driver = openDriver(device, url);
+            callback.call(this, driver, device);
+        });
+    });
+};
+
 (function (export) {
     export.devices = devices;
     export.openDriver = openDriver;
+    export.testOnDevice = testOnDevice;
     export.testOnAllDevices = testOnAllDevices;
 })(this);
 
