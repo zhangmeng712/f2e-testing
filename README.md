@@ -25,7 +25,7 @@ describe("A suite", function() {
 
 ### <a href="https://github.com/zhangmeng712/f2e-testing/blob/master/basic/mocha-demo.md">mocha用法分析</a>
 ### sinon
-### chai & chai plugins
+### <a href="https://github.com/zhangmeng712/f2e-testing/blob/master/basic/chai-demo.md">chai & chai plugins</a>
 
 
 ## Testing Tools

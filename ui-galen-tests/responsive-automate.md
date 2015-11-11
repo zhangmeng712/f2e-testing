@@ -2,17 +2,37 @@
 
 ## 响应式设计介绍
 
-响应式设计（RWD）从2010年开始就逐渐进入人们的视线，虽然由于网速和网络的制约，目前国内都是采用针对pc和移动分别开发站点的策略，例如淘宝网的首页在pc上使用的是 ，在移动端使用的是。但是没人能否认响应式设计的重要性和简便性。响应式设计其实简单来说就是利用media query针对不同的设备和分辨率采用不同的css样式，用以达到网站在各个设备上的兼容性，再结合“移动优先”的策略，使得响应式设计更加的具有优势。
-如下图所示，就是一个简单的购物网站在不同设备上的响应式设计
+响应式设计（RWD）从2010年开始就逐渐进入人们的视线，虽然由于网速和网络的制约，目前国内都是采用针对pc和移动分别开发站点的策略，例如淘宝网的首页在pc端<a href="https://www.taobao.com/" target="_blank">网页</a> ，在移动端的网页为<a href="https://m.taobao.com/" target="_blank">网页</a>，使用的是基于REM的布局设计。但是没人能否认响应式设计的重要性和简便性。响应式设计其实简单来说就是利用media query针对不同的设备和分辨率采用不同的css样式，用以达到网站在各个设备上的兼容性，再结合“移动优先”的策略，使得响应式设计更加的具有优势。如下图所示，就是一个简单的购物网站在不同设备上的响应式设计。
 
 ![](https://media-mediatemple.netdna-ssl.com/wp-content/uploads/2015/03/04-initial-sketch-opt-small.jpg)
 
 ## 响应式设计的实现
+下面就举一个简单的响应式网站的<a href="http://testapp.galenframework.com/" target="_blank">例子</a>。
+代码见<a href="https://github.com/zhangmeng712/f2e-testing/tree/master/ui-galen-tests/src" target="_blank">f2e-testing</a>
 
-代码见
+- 首页welcome页面
+- 登陆页面
+- notes列表页面
+- 新建note页面
+
+
+### 公共头尾和菜单的响应式
+
+
+### welcome页面
+
+
+### 
+
+
+
+
+
 	
 ## galenframework
 ### 介绍
+
+
 ### 安装
 
 - 下载<a href="https://github.com/galenframework/galen/releases/download/galen-2.1.2/galen-bin-2.1.2.zip" target="_blank">二进制代码</a>
@@ -32,7 +52,7 @@ JavaScript executor: Rhino 1.7 release 5 2015 01 29
     - tests文件夹：用于装载测试脚本
         - login.page.test.js（默认是以.test.js后缀作为测试文件，如果有特殊要求可以在config文件中配置）
         - init.js: 用于配置测试的设备和尺寸
-        - pages文件夹： ui自动化测试的Page Object
+        - pages文件夹： ui自动化测试的Page Object页面
     - specs文件夹: 用于装载响应式设计的规则
         - loginPge.spec
     - config文件：配置文件
@@ -78,6 +98,8 @@ var driver = createGridDriver('http://127.0.0.1:8001/wd/hub',{
 checkLayout(driver, "specs/welcomePage.spec", 'desktop');
 ```
 
+
+## 总结和构想
 
 
 

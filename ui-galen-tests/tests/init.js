@@ -25,7 +25,7 @@ var devices = {
     //        return createGridDriver('http://127.0.0.1:8002/wd/hub',{
     //            desiredCapabilities: {
     //                platformName: 'Android',
-    //                platformVersion: '4.4.4',
+    //                platformVersion: '4.4.4', //sumsung SIII 360*640
     //                deviceName: 'Sumsung'
     //            }
     //        })
@@ -46,7 +46,7 @@ var devices = {
     //                'platformName': 'iOS',
     //                'app': 'safari',
     //                 deviceName:"iPad Air",
-    //                 size: '600x800',
+    //                 size: '768x1024',
     //                 safariInitialUrl: 'about:blank'
     //            }
     //        })
