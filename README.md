@@ -411,13 +411,13 @@ describe('test page of taobao search', function () {
 
 
 ## ReactTesting Demo
-- UI tesing by wd.js
+-  <a href="react/test/" target="_blank">UI tesing by wd.js</a>
 - Page Object Pattern
 - react-test-tree
 
 
 ## Galen Framework Demo
-- RWD Testing
+- <a href="ui-galen-tests/responsive-automate.md">RWD Testing</a>
 - ADs Style Testing
 
 
