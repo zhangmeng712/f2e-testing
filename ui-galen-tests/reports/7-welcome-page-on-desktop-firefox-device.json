@@ -1,0 +1,520 @@
+{
+  "testId" : "7-welcome-page-on-desktop-firefox-device",
+  "name" : "Welcome page on desktop firefox device",
+  "report" : {
+    "nodes" : [ {
+      "name" : "Check layout: specs/welcomePage.spec included tags: desktop",
+      "status" : "info",
+      "time" : 1448108463433,
+      "includedTags" : [ "desktop" ],
+      "sections" : [ {
+        "name" : "Header",
+        "objects" : [ {
+          "name" : "header",
+          "specs" : [ {
+            "status" : "info",
+            "place" : {
+              "filePath" : "specs/common.spec",
+              "lineNumber" : 15
+            },
+            "name" : "inside screen 0px top",
+            "highlight" : [ "header", "screen" ]
+          }, {
+            "status" : "info",
+            "place" : {
+              "filePath" : "specs/common.spec",
+              "lineNumber" : 16
+            },
+            "name" : "centered horizontally inside screen 1px",
+            "highlight" : [ "header", "screen" ]
+          }, {
+            "status" : "info",
+            "place" : {
+              "filePath" : "specs/common.spec",
+              "lineNumber" : 17
+            },
+            "name" : "height ~ 70px",
+            "highlight" : [ "header" ]
+          }, {
+            "status" : "info",
+            "place" : {
+              "filePath" : "specs/common.spec",
+              "lineNumber" : 28
+            },
+            "name" : "width 900px",
+            "highlight" : [ "header" ]
+          } ]
+        }, {
+          "name" : "header-logo",
+          "specs" : [ {
+            "status" : "info",
+            "place" : {
+              "filePath" : "specs/common.spec",
+              "lineNumber" : 20
+            },
+            "name" : "inside header 5 to 15px top, 0 to 10px left",
+            "highlight" : [ "header-logo", "header" ]
+          }, {
+            "status" : "info",
+            "place" : {
+              "filePath" : "specs/common.spec",
+              "lineNumber" : 21
+            },
+            "name" : "near header-text 5 to 30px left",
+            "highlight" : [ "header-logo", "header-text" ]
+          } ]
+        }, {
+          "name" : "header-text",
+          "specs" : [ {
+            "status" : "info",
+            "place" : {
+              "filePath" : "specs/common.spec",
+              "lineNumber" : 24
+            },
+            "name" : "inside header 10 to 25px top",
+            "highlight" : [ "header-text", "header" ]
+          }, {
+            "status" : "info",
+            "place" : {
+              "filePath" : "specs/common.spec",
+              "lineNumber" : 31
+            },
+            "name" : "text is \"Sample Website for Galen Framework\"",
+            "highlight" : [ "header-text" ]
+          } ]
+        } ]
+      }, {
+        "name" : "Menu",
+        "objects" : [ {
+          "name" : "menu",
+          "specs" : [ {
+            "status" : "info",
+            "place" : {
+              "filePath" : "specs/common.spec",
+              "lineNumber" : 43
+            },
+            "name" : "centered horizontally inside screen 1px",
+            "highlight" : [ "menu", "screen" ]
+          }, {
+            "status" : "info",
+            "place" : {
+              "filePath" : "specs/common.spec",
+              "lineNumber" : 44
+            },
+            "name" : "below header ~ 0px",
+            "highlight" : [ "menu", "header" ]
+          }, {
+            "status" : "info",
+            "place" : {
+              "filePath" : "specs/common.spec",
+              "lineNumber" : 49
+            },
+            "name" : "width 900px",
+            "highlight" : [ "menu" ]
+          } ]
+        }, {
+          "name" : "menu-item-1",
+          "specs" : [ {
+            "status" : "info",
+            "place" : {
+              "filePath" : "specs/common.spec",
+              "lineNumber" : 54
+            },
+            "name" : "inside menu ~ 0px top left bottom",
+            "highlight" : [ "menu-item-1", "menu" ]
+          }, {
+            "status" : "info",
+            "place" : {
+              "filePath" : "specs/common.spec",
+              "lineNumber" : 57
+            },
+            "name" : "width 90 to 130px",
+            "highlight" : [ "menu-item-1" ]
+          }, {
+            "status" : "info",
+            "place" : {
+              "filePath" : "specs/common.spec",
+              "lineNumber" : 58
+            },
+            "name" : "height ~ 64px",
+            "highlight" : [ "menu-item-1" ]
+          }, {
+            "status" : "info",
+            "place" : {
+              "filePath" : "specs/common.spec",
+              "lineNumber" : 59
+            },
+            "name" : "inside menu ~ 0px top",
+            "highlight" : [ "menu-item-1", "menu" ]
+          } ]
+        }, {
+          "name" : "menu-item-2",
+          "specs" : [ {
+            "status" : "info",
+            "place" : {
+              "filePath" : "specs/common.spec",
+              "lineNumber" : 57
+            },
+            "name" : "width 90 to 130px",
+            "highlight" : [ "menu-item-2" ]
+          }, {
+            "status" : "info",
+            "place" : {
+              "filePath" : "specs/common.spec",
+              "lineNumber" : 58
+            },
+            "name" : "height ~ 64px",
+            "highlight" : [ "menu-item-2" ]
+          }, {
+            "status" : "info",
+            "place" : {
+              "filePath" : "specs/common.spec",
+              "lineNumber" : 59
+            },
+            "name" : "inside menu ~ 0px top",
+            "highlight" : [ "menu-item-2", "menu" ]
+          }, {
+            "status" : "info",
+            "place" : {
+              "filePath" : "specs/common.spec",
+              "lineNumber" : 63
+            },
+            "name" : "right-of menu-item-1 0 to 5px",
+            "highlight" : [ "menu-item-2", "menu-item-1" ]
+          }, {
+            "status" : "info",
+            "place" : {
+              "filePath" : "specs/common.spec",
+              "lineNumber" : 64
+            },
+            "name" : "aligned horizontally all menu-item-1",
+            "highlight" : [ "menu-item-2", "menu-item-1" ]
+          } ]
+        }, {
+          "name" : "menu-item-3",
+          "specs" : [ {
+            "status" : "info",
+            "place" : {
+              "filePath" : "specs/common.spec",
+              "lineNumber" : 57
+            },
+            "name" : "width 90 to 130px",
+            "highlight" : [ "menu-item-3" ]
+          }, {
+            "status" : "info",
+            "place" : {
+              "filePath" : "specs/common.spec",
+              "lineNumber" : 58
+            },
+            "name" : "height ~ 64px",
+            "highlight" : [ "menu-item-3" ]
+          }, {
+            "status" : "info",
+            "place" : {
+              "filePath" : "specs/common.spec",
+              "lineNumber" : 59
+            },
+            "name" : "inside menu ~ 0px top",
+            "highlight" : [ "menu-item-3", "menu" ]
+          }, {
+            "status" : "info",
+            "place" : {
+              "filePath" : "specs/common.spec",
+              "lineNumber" : 63
+            },
+            "name" : "right-of menu-item-2 0 to 5px",
+            "highlight" : [ "menu-item-3", "menu-item-2" ]
+          }, {
+            "status" : "info",
+            "place" : {
+              "filePath" : "specs/common.spec",
+              "lineNumber" : 64
+            },
+            "name" : "aligned horizontally all menu-item-2",
+            "highlight" : [ "menu-item-3", "menu-item-2" ]
+          } ]
+        }, {
+          "name" : "menu-item-4",
+          "specs" : [ {
+            "status" : "info",
+            "place" : {
+              "filePath" : "specs/common.spec",
+              "lineNumber" : 57
+            },
+            "name" : "width 90 to 130px",
+            "highlight" : [ "menu-item-4" ]
+          }, {
+            "status" : "info",
+            "place" : {
+              "filePath" : "specs/common.spec",
+              "lineNumber" : 58
+            },
+            "name" : "height ~ 64px",
+            "highlight" : [ "menu-item-4" ]
+          }, {
+            "status" : "info",
+            "place" : {
+              "filePath" : "specs/common.spec",
+              "lineNumber" : 59
+            },
+            "name" : "inside menu ~ 0px top",
+            "highlight" : [ "menu-item-4", "menu" ]
+          }, {
+            "status" : "info",
+            "place" : {
+              "filePath" : "specs/common.spec",
+              "lineNumber" : 63
+            },
+            "name" : "right-of menu-item-3 0 to 5px",
+            "highlight" : [ "menu-item-4", "menu-item-3" ]
+          }, {
+            "status" : "info",
+            "place" : {
+              "filePath" : "specs/common.spec",
+              "lineNumber" : 64
+            },
+            "name" : "aligned horizontally all menu-item-3",
+            "highlight" : [ "menu-item-4", "menu-item-3" ]
+          } ]
+        } ]
+      }, {
+        "name" : "Content",
+        "objects" : [ {
+          "name" : "content",
+          "specs" : [ {
+            "status" : "info",
+            "place" : {
+              "filePath" : "specs/common.spec",
+              "lineNumber" : 83
+            },
+            "name" : "below menu ~ 0px",
+            "highlight" : [ "content", "menu" ]
+          }, {
+            "status" : "info",
+            "place" : {
+              "filePath" : "specs/common.spec",
+              "lineNumber" : 84
+            },
+            "name" : "centered horizontally inside screen 1px",
+            "highlight" : [ "content", "screen" ]
+          }, {
+            "status" : "info",
+            "place" : {
+              "filePath" : "specs/common.spec",
+              "lineNumber" : 89
+            },
+            "name" : "width 900px",
+            "highlight" : [ "content" ]
+          } ]
+        }, {
+          "name" : "welcome-block",
+          "specs" : [ {
+            "status" : "info",
+            "place" : {
+              "filePath" : "specs/welcomePage.spec",
+              "lineNumber" : 14
+            },
+            "name" : "inside content ~ 20px top left right",
+            "highlight" : [ "welcome-block", "content" ]
+          } ]
+        }, {
+          "name" : "text-block-1",
+          "specs" : [ {
+            "status" : "info",
+            "place" : {
+              "filePath" : "specs/welcomePage.spec",
+              "lineNumber" : 17
+            },
+            "name" : "inside welcome-block ~30px left",
+            "highlight" : [ "text-block-1", "welcome-block" ]
+          }, {
+            "status" : "info",
+            "place" : {
+              "filePath" : "specs/welcomePage.spec",
+              "lineNumber" : 24
+            },
+            "name" : "height > 20px",
+            "highlight" : [ "text-block-1" ]
+          }, {
+            "status" : "info",
+            "place" : {
+              "filePath" : "specs/welcomePage.spec",
+              "lineNumber" : 25
+            },
+            "name" : "above login-button 10 to 50 px",
+            "highlight" : [ "text-block-1", "login-button" ]
+          } ]
+        }, {
+          "name" : "login-button",
+          "specs" : [ {
+            "status" : "info",
+            "place" : {
+              "filePath" : "specs/welcomePage.spec",
+              "lineNumber" : 17
+            },
+            "name" : "inside welcome-block ~30px left",
+            "highlight" : [ "login-button", "welcome-block" ]
+          }, {
+            "status" : "info",
+            "place" : {
+              "filePath" : "specs/welcomePage.spec",
+              "lineNumber" : 28
+            },
+            "name" : "height ~ 45px",
+            "highlight" : [ "login-button" ]
+          }, {
+            "status" : "info",
+            "place" : {
+              "filePath" : "specs/welcomePage.spec",
+              "lineNumber" : 29
+            },
+            "name" : "text is \"Login\"",
+            "highlight" : [ "login-button" ]
+          }, {
+            "status" : "info",
+            "place" : {
+              "filePath" : "specs/welcomePage.spec",
+              "lineNumber" : 30
+            },
+            "name" : "above text-block-3 10 to 50px",
+            "highlight" : [ "login-button", "text-block-3" ]
+          }, {
+            "status" : "info",
+            "place" : {
+              "filePath" : "specs/welcomePage.spec",
+              "lineNumber" : 39
+            },
+            "name" : "width ~ 78px",
+            "highlight" : [ "login-button" ]
+          } ]
+        }, {
+          "name" : "text-block-3",
+          "specs" : [ {
+            "status" : "info",
+            "place" : {
+              "filePath" : "specs/welcomePage.spec",
+              "lineNumber" : 17
+            },
+            "name" : "inside welcome-block ~30px left",
+            "highlight" : [ "text-block-3", "welcome-block" ]
+          } ]
+        }, {
+          "name" : "greeting",
+          "specs" : [ {
+            "status" : "info",
+            "place" : {
+              "filePath" : "specs/welcomePage.spec",
+              "lineNumber" : 20
+            },
+            "name" : "above text-block-1 10 to 50 px",
+            "highlight" : [ "greeting", "text-block-1" ]
+          }, {
+            "status" : "info",
+            "place" : {
+              "filePath" : "specs/welcomePage.spec",
+              "lineNumber" : 21
+            },
+            "name" : "inside welcome-block ~ 30px left",
+            "highlight" : [ "greeting", "welcome-block" ]
+          }, {
+            "status" : "info",
+            "place" : {
+              "filePath" : "specs/welcomePage.spec",
+              "lineNumber" : 35
+            },
+            "name" : "height ~ 69px",
+            "highlight" : [ "greeting" ]
+          }, {
+            "status" : "info",
+            "place" : {
+              "filePath" : "specs/welcomePage.spec",
+              "lineNumber" : 36
+            },
+            "name" : "inside welcome-block ~ 68 px top",
+            "highlight" : [ "greeting", "welcome-block" ]
+          } ]
+        } ]
+      }, {
+        "name" : "Footer",
+        "objects" : [ {
+          "name" : "footer",
+          "specs" : [ {
+            "status" : "info",
+            "place" : {
+              "filePath" : "specs/common.spec",
+              "lineNumber" : 94
+            },
+            "name" : "height ~ 200px",
+            "highlight" : [ "footer" ]
+          }, {
+            "status" : "info",
+            "place" : {
+              "filePath" : "specs/common.spec",
+              "lineNumber" : 95
+            },
+            "name" : "below content 0px",
+            "highlight" : [ "footer", "content" ]
+          } ]
+        } ]
+      } ],
+      "objects" : {
+        "menu-item-4" : {
+          "area" : [ 414, 70, 100, 64 ]
+        },
+        "screen" : {
+          "area" : [ 0, 0, 1080, 750 ]
+        },
+        "greeting" : {
+          "area" : [ 140, 222, 800, 69 ]
+        },
+        "login-button" : {
+          "area" : [ 140, 346, 79, 46 ]
+        },
+        "menu" : {
+          "area" : [ 90, 70, 900, 64 ]
+        },
+        "menu-item-1" : {
+          "area" : [ 90, 70, 100, 64 ]
+        },
+        "header" : {
+          "area" : [ 90, 0, 900, 70 ]
+        },
+        "menu-item-2" : {
+          "area" : [ 194, 70, 112, 64 ]
+        },
+        "menu-item-3" : {
+          "area" : [ 310, 70, 100, 64 ]
+        },
+        "footer" : {
+          "area" : [ 0, 550, 1080, 200 ]
+        },
+        "content" : {
+          "area" : [ 90, 134, 900, 416 ]
+        },
+        "text-block-3" : {
+          "area" : [ 140, 407, 800, 30 ]
+        },
+        "text-block-1" : {
+          "area" : [ 140, 301, 800, 30 ]
+        },
+        "header-logo" : {
+          "area" : [ 90, 13, 48, 48 ]
+        },
+        "welcome-block" : {
+          "area" : [ 110, 154, 860, 346 ]
+        },
+        "header-text" : {
+          "area" : [ 160, 20, 629, 40 ]
+        }
+      },
+      "screenshot" : "layout-16-screenshot.png",
+      "type" : "layout"
+    }, {
+      "name" : "Screenshot",
+      "status" : "info",
+      "attachments" : [ "file-17-Screenshot" ],
+      "time" : 1448108463433,
+      "type" : "node"
+    } ]
+  }
+}

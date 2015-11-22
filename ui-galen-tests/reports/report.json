@@ -1,23 +1,143 @@
 {
   "tests" : [ {
-    "name" : "Welcome page on desktop chrome device",
-    "startedAt" : 1446822992750,
-    "endedAt" : 1446823004365,
+    "name" : "Login page on desktop firefox device",
+    "startedAt" : 1448108315555,
+    "endedAt" : 1448108323702,
     "failed" : false,
     "statistic" : {
-      "passed" : 49,
+      "passed" : 66,
       "errors" : 0,
       "warnings" : 0,
-      "total" : 49
+      "total" : 66
     },
-    "testId" : "1-welcome-page-on-desktop-chrome-device",
+    "testId" : "1-login-page-on-desktop-firefox-device",
     "groups" : [ ],
     "failed" : false,
-    "duration" : 11615
+    "duration" : 8147
   }, {
-    "name" : "Menu Highlight on desktop chrome device",
-    "startedAt" : 1446823004937,
-    "endedAt" : 1446823013737,
+    "name" : "Login page on Android chrome device",
+    "startedAt" : 1448108324085,
+    "endedAt" : 1448108364614,
+    "failed" : false,
+    "statistic" : {
+      "passed" : 51,
+      "errors" : 0,
+      "warnings" : 0,
+      "total" : 51
+    },
+    "testId" : "2-login-page-on-android-chrome-device",
+    "groups" : [ ],
+    "failed" : false,
+    "duration" : 40529
+  }, {
+    "name" : "Login page on ipad Air safari device",
+    "startedAt" : 1448108366893,
+    "endedAt" : 1448108390510,
+    "failed" : false,
+    "statistic" : {
+      "passed" : 63,
+      "errors" : 0,
+      "warnings" : 0,
+      "total" : 63
+    },
+    "testId" : "3-login-page-on-ipad-air-safari-device",
+    "groups" : [ ],
+    "failed" : false,
+    "duration" : 23617
+  }, {
+    "name" : "MyNotes page on desktop firefox device",
+    "startedAt" : 1448108394637,
+    "endedAt" : 1448108400942,
+    "failed" : false,
+    "statistic" : {
+      "passed" : 64,
+      "errors" : 0,
+      "warnings" : 0,
+      "total" : 64
+    },
+    "testId" : "4-mynotes-page-on-desktop-firefox-device",
+    "groups" : [ ],
+    "failed" : false,
+    "duration" : 6305
+  }, {
+    "name" : "MyNotes page on Android chrome device",
+    "startedAt" : 1448108401347,
+    "endedAt" : 1448108433687,
+    "failed" : true,
+    "statistic" : {
+      "passed" : 47,
+      "errors" : 1,
+      "warnings" : 0,
+      "total" : 48
+    },
+    "testId" : "5-mynotes-page-on-android-chrome-device",
+    "groups" : [ ],
+    "failed" : true,
+    "duration" : 32340
+  }, {
+    "name" : "MyNotes page on ipad Air safari device",
+    "startedAt" : 1448108435925,
+    "endedAt" : 1448108455169,
+    "failed" : false,
+    "statistic" : {
+      "passed" : 61,
+      "errors" : 0,
+      "warnings" : 0,
+      "total" : 61
+    },
+    "testId" : "6-mynotes-page-on-ipad-air-safari-device",
+    "groups" : [ ],
+    "failed" : false,
+    "duration" : 19244
+  }, {
+    "name" : "Welcome page on desktop firefox device",
+    "startedAt" : 1448108458262,
+    "endedAt" : 1448108463433,
+    "failed" : false,
+    "statistic" : {
+      "passed" : 50,
+      "errors" : 0,
+      "warnings" : 0,
+      "total" : 50
+    },
+    "testId" : "7-welcome-page-on-desktop-firefox-device",
+    "groups" : [ ],
+    "failed" : false,
+    "duration" : 5171
+  }, {
+    "name" : "Welcome page on Android chrome device",
+    "startedAt" : 1448108463819,
+    "endedAt" : 1448108490745,
+    "failed" : false,
+    "statistic" : {
+      "passed" : 36,
+      "errors" : 0,
+      "warnings" : 0,
+      "total" : 36
+    },
+    "testId" : "8-welcome-page-on-android-chrome-device",
+    "groups" : [ ],
+    "failed" : false,
+    "duration" : 26926
+  }, {
+    "name" : "Welcome page on ipad Air safari device",
+    "startedAt" : 1448108493188,
+    "endedAt" : 1448108512196,
+    "failed" : true,
+    "statistic" : {
+      "passed" : 45,
+      "errors" : 2,
+      "warnings" : 0,
+      "total" : 47
+    },
+    "testId" : "9-welcome-page-on-ipad-air-safari-device",
+    "groups" : [ ],
+    "failed" : true,
+    "duration" : 19008
+  }, {
+    "name" : "Menu Highlight on desktop firefox device",
+    "startedAt" : 1448108515399,
+    "endedAt" : 1448108519155,
     "failed" : true,
     "statistic" : {
       "passed" : 2,
@@ -25,9 +145,9 @@
       "warnings" : 0,
       "total" : 4
     },
-    "testId" : "2-menu-highlight-on-desktop-chrome-device",
+    "testId" : "10-menu-highlight-on-desktop-firefox-device",
     "groups" : [ ],
     "failed" : true,
-    "duration" : 8800
+    "duration" : 3756
   } ]
 }

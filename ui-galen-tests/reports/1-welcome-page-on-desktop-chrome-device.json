@@ -5,7 +5,7 @@
     "nodes" : [ {
       "name" : "Check layout: specs/welcomePage.spec included tags: desktop",
       "status" : "info",
-      "time" : 1446823004365,
+      "time" : 1447944370950,
       "includedTags" : [ "desktop" ],
       "sections" : [ {
         "name" : "Header",

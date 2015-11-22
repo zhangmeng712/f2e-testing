@@ -1,132 +1,154 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Sample Website for Galen Framework</title>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sample Website for Galen Framework</title>
 
-        <!-- Bootstrap -->
-        <link href="../src/assets/bootstrap.min.css" rel="stylesheet">
-        <link href="../src/assets/bootstrap-theme.min.css" rel="stylesheet">
-        <link href="../src/assets/main.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="../src/assets/bootstrap.min.css" rel="stylesheet">
+    <link href="../src/assets/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="../src/assets/main.css" rel="stylesheet">
 
-        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-          <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
-        <script src="../src/assets/handlebars-v1.3.0.js"></script>
-    </head>
-    <body>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="../src/assets/handlebars-v1.3.0.js"></script>
+</head>
+<body>
 
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="../src/assets/jquery-1.8.3.min.js"></script>
-        <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="../src/assets/bootstrap.min.js"></script>
-        <script src="../src/assets/myapp.js"></script>
-        <script>
-            $(function () {
-                App.init();
-                App.showWelcomePage();
-                // App.showLoginPage();
-            });
-        </script>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="../src/assets/jquery-1.8.3.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="../src/assets/bootstrap.min.js"></script>
+<script src="../src/assets/myapp.js"></script>
+<script>
+    $(function () {
+        App.init();
+        App.showWelcomePage();
+        // App.showLoginPage();
+    });
+</script>
 
-        <div id="header">
-            <div class="middle-wrapper">
-                <img id="header-logo" src="../src/assets/header-icon.png"> <h1> Sample Website <span class="not-on-mobile not-on-tablet">for Galen Framework</span></h1>
-            </div>
+<div id="header">
+    <div class="middle-wrapper">
+        <img id="header-logo" src="../src/assets/header-icon.png">
+
+        <h1> Sample Website <span class="not-on-mobile not-on-tablet">for Galen Framework</span></h1>
+    </div>
+</div>
+<div id="middle">
+    <div id="menu">
+        <div class="middle-wrapper">
+            <ul>
+                <li cass="when-not-logged"><a href="http://testapp.galenframework.com/#">Home</a></li>
+                <li class="when-logged"><a href="http://testapp.galenframework.com/#">My Notes</a></li>
+                <li class="when-logged"><a href="http://testapp.galenframework.com/#">About</a></li>
+                <li class="when-logged"><a href="http://testapp.galenframework.com/#">Contact</a></li>
+            </ul>
         </div>
-        <div id="middle">
-            <div id="menu">
-                <div class="middle-wrapper">
-                    <ul>
-                        <li cass="when-not-logged"><a href="http://testapp.galenframework.com/#">Home</a></li>
-                        <li class="when-logged"><a href="http://testapp.galenframework.com/#">My Notes</a></li>
-                        <li class="when-logged"><a href="http://testapp.galenframework.com/#">About</a></li>
-                        <li class="when-logged"><a href="http://testapp.galenframework.com/#">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="middle-wrapper">
-                <div id="content">
+    </div>
+    <div class="middle-wrapper">
+        <div id="content">
             <div id="welcome-page" class="jumbotron">
                 <h1>Welcome to our test page!</h1>
+
                 <p>This app is used as a playground for <a href="http://galenframework.com/">Galen Framework</a></p>
-                <p><button class="btn btn-lg btn-primary button-login" type="button" onclick="App.showLoginPage();">Login</button></p>
+
+                <p>
+                    <button class="btn btn-lg btn-primary button-login" type="button" onclick="App.showLoginPage();">
+                        Login
+                    </button>
+                </p>
                 <p>To log in this website use the email <b>testuser@example.com</b> and password <b>test123</b>
-            </p></div>
+                </p></div>
         </div>
-            </div>
+    </div>
+</div>
+<div id="footer">
+    <div class="signature">
+    </div>
+</div>
+
+<script id="tpl-welcome-page" type="text/x-handlebars-template">
+    <div id="welcome-page" class="jumbotron">
+        <h1>Welcome to our test page!</h1>
+
+        <p>This app is used as a playground for <a href="http://galenframework.com">Galen Framework</a></p>
+
+        <p>
+            <button class="btn btn-lg btn-primary button-login" type="button" onclick="App.showLoginPage();">Login
+            </button>
+        </p>
+        <p>To log in this website use the email <b>testuser@example.com</b> and password <b>test123</b>
+    </div>
+</script>
+
+<script id="tpl-login-page" type="text/x-handlebars-template">
+    <div id="login-page" class="dialog-panel">
+        <h2>Login</h2>
+
+        <p>
+            <input type="text" class="form-control" placeholder="Username" name="login.username">
+        </p>
+
+        <p>
+            <input type="text" class="form-control" placeholder="Password" name="login.password">
+        </p>
+
+        <div id="login-error-message" class="alert alert-danger" style="display: none"></div>
+
+        <p>
+            <button class="btn btn-lg btn-primary button-login" type="button" onclick="App.login()">Login</button>
+            <button class="btn btn-lg btn-default button-cancel" type="button" onclick="App.showWelcomePage()">Cancel
+            </button>
+        </p>
+    </div>
+</script>
+
+<script id="tpl-my-notes-page" type="text/x-handlebars-template">
+    <div id="my-notes-page">
+        <h2>My Notes</h2>
+
+        <div class="list-group">
+            {{#each notes}}
+            <a href="javascript: App.showMyNote({{id}});" class="list-group-item">
+                <h4 class="list-group-item-heading">{{title}}</h4>
+
+                <p class="list-group-item-text">{{shortText description}}</p>
+            </a>
+            {{/each}}
         </div>
-        <div id="footer">
-            <div class="signature">
-            </div>
-        </div>
+        <button class="btn btn-lg btn-primary" type="button" onclick="App.showAddNotePage();">Add note</button>
+    </div>
+</script>
 
-        <script id="tpl-welcome-page" type="text/x-handlebars-template">
-            <div id="welcome-page" class="jumbotron">
-                <h1>Welcome to our test page!</h1>
-                <p>This app is used as a playground for <a href="http://galenframework.com">Galen Framework</a></p>
-                <p><button class="btn btn-lg btn-primary button-login" type="button" onclick="App.showLoginPage();">Login</button></p>
-                <p>To log in this website use the email <b>testuser@example.com</b> and password <b>test123</b>
-            </div>
-        </script>
+<script id="tpl-add-note-page" type="text/x-handlebars-template">
+    <div id="ad-note-page">
+        <h2>{{heading}}</h2>
 
-        <script id="tpl-login-page" type="text/x-handlebars-template">
-            <div id="login-page" class="dialog-panel">
-                <h2>Login</h2>
+        <p>
+            <input type="text" class="form-control" placeholder="Title" name="note.title" value="{{title}}">
+        </p>
 
-                <p>
-                    <input type="text" class="form-control" placeholder="Username" name="login.username">
-                </p>
-                <p>
-                    <input type="text" class="form-control" placeholder="Password" name="login.password">
-                </p>
+        <p>
+            <textarea rows="10" class="form-control" placeholder="Description"
+                      name="note.description">{{description}}</textarea>
+        </p>
 
-                <div id="login-error-message" class="alert alert-danger" style="display: none"></div>
-
-                <p>
-                    <button class="btn btn-lg btn-primary button-login" type="button" onclick="App.login()">Login</button>
-                    <button class="btn btn-lg btn-default button-cancel" type="button" onclick="App.showWelcomePage()">Cancel</button>
-                </p>
-            </div>
-        </script>
-
-        <script id="tpl-my-notes-page" type="text/x-handlebars-template">
-            <div id="my-notes-page">
-                <h2>My Notes</h2>
-                <div class="list-group">
-                    {{#each notes}}
-                    <a href="javascript: App.showMyNote({{id}});" class="list-group-item">
-                        <h4 class="list-group-item-heading">{{title}}</h4>
-                        <p class="list-group-item-text">{{shortText description}}</p>
-                    </a>
-                    {{/each}}
-                </div>
-                <button class="btn btn-lg btn-primary" type="button" onclick="App.showAddNotePage();">Add note</button>
-            </div>
-        </script>
-
-        <script id="tpl-add-note-page" type="text/x-handlebars-template">
-            <div id="ad-note-page">
-                <h2>{{heading}}</h2>
-
-                <p>
-                <input type="text" class="form-control" placeholder="Title" name="note.title" value="{{title}}">
-                </p>
-                <p>
-                <textarea rows="10" class="form-control" placeholder="Description" name="note.description">{{description}}</textarea>
-                </p>
-                <div id="note-error-message" class="alert alert-danger" style="display: none"></div>
-                <p>
-                    <button class="btn btn-lg btn-primary" type="button" onclick="App.addNote()">{{operation}}</button>
-                    <button class="btn btn-lg btn-default" type="button" onclick="App.showMyNotesPage()">Cancel</button>
-                </p>
-            </div>
-        </script>
-    
+        <div id="note-error-message" class="alert alert-danger" style="display: none"></div>
+        <p>
+            <button class="btn btn-lg btn-primary" type="button" onclick="App.addNote()">{{operation}}</button>
+            <button class="btn btn-lg btn-default" type="button" onclick="App.showMyNotesPage()">Cancel</button>
+        </p>
+    </div>
+</script>
 
 
-</body></html>
+</body>
+</html>

@@ -1,0 +1,577 @@
+{
+  "testId" : "2-login-page-on-android-chrome-device",
+  "name" : "Login page on Android chrome device",
+  "report" : {
+    "nodes" : [ {
+      "name" : "Basic layout check",
+      "status" : "info",
+      "nodes" : [ {
+        "name" : "Click loginButton on Welcome page",
+        "status" : "info",
+        "nodes" : [ {
+          "name" : "css: #welcome-page .button-login",
+          "type" : "text"
+        } ],
+        "time" : 1448108355989,
+        "type" : "node"
+      }, {
+        "name" : "Check layout: specs/loginPage.spec included tags: mobile",
+        "status" : "info",
+        "time" : 1448108362363,
+        "includedTags" : [ "mobile" ],
+        "sections" : [ {
+          "name" : "Header",
+          "objects" : [ {
+            "name" : "header",
+            "specs" : [ {
+              "status" : "info",
+              "place" : {
+                "filePath" : "specs/common.spec",
+                "lineNumber" : 15
+              },
+              "name" : "inside screen 0px top",
+              "highlight" : [ "header", "screen" ]
+            }, {
+              "status" : "info",
+              "place" : {
+                "filePath" : "specs/common.spec",
+                "lineNumber" : 16
+              },
+              "name" : "centered horizontally inside screen 1px",
+              "highlight" : [ "header", "screen" ]
+            }, {
+              "status" : "info",
+              "place" : {
+                "filePath" : "specs/common.spec",
+                "lineNumber" : 17
+              },
+              "name" : "height ~ 70px",
+              "highlight" : [ "header" ]
+            } ]
+          }, {
+            "name" : "header-logo",
+            "specs" : [ {
+              "status" : "info",
+              "place" : {
+                "filePath" : "specs/common.spec",
+                "lineNumber" : 20
+              },
+              "name" : "inside header 5 to 15px top, 0 to 10px left",
+              "highlight" : [ "header-logo", "header" ]
+            }, {
+              "status" : "info",
+              "place" : {
+                "filePath" : "specs/common.spec",
+                "lineNumber" : 21
+              },
+              "name" : "near header-text 5 to 30px left",
+              "highlight" : [ "header-logo", "header-text" ]
+            } ]
+          }, {
+            "name" : "header-text",
+            "specs" : [ {
+              "status" : "info",
+              "place" : {
+                "filePath" : "specs/common.spec",
+                "lineNumber" : 24
+              },
+              "name" : "inside header 10 to 25px top",
+              "highlight" : [ "header-text", "header" ]
+            }, {
+              "status" : "info",
+              "place" : {
+                "filePath" : "specs/common.spec",
+                "lineNumber" : 36
+              },
+              "name" : "text is \"Sample Website\"",
+              "highlight" : [ "header-text" ]
+            } ]
+          } ]
+        }, {
+          "name" : "Menu",
+          "objects" : [ {
+            "name" : "menu",
+            "specs" : [ {
+              "status" : "info",
+              "place" : {
+                "filePath" : "specs/common.spec",
+                "lineNumber" : 43
+              },
+              "name" : "centered horizontally inside screen 1px",
+              "highlight" : [ "menu", "screen" ]
+            }, {
+              "status" : "info",
+              "place" : {
+                "filePath" : "specs/common.spec",
+                "lineNumber" : 44
+              },
+              "name" : "below header ~ 0px",
+              "highlight" : [ "menu", "header" ]
+            } ]
+          }, {
+            "name" : "menu-item-1",
+            "specs" : [ {
+              "status" : "info",
+              "place" : {
+                "filePath" : "specs/common.spec",
+                "lineNumber" : 69
+              },
+              "name" : "width 48 to 50% of screen/width",
+              "highlight" : [ "menu-item-1" ]
+            }, {
+              "status" : "info",
+              "place" : {
+                "filePath" : "specs/common.spec",
+                "lineNumber" : 73
+              },
+              "name" : "above menu-item-3 0 to 5px",
+              "highlight" : [ "menu-item-1", "menu-item-3" ]
+            }, {
+              "status" : "info",
+              "place" : {
+                "filePath" : "specs/common.spec",
+                "lineNumber" : 77
+              },
+              "name" : "near menu-item-2  0 to 5 px left",
+              "highlight" : [ "menu-item-1", "menu-item-2" ]
+            } ]
+          }, {
+            "name" : "menu-item-2",
+            "specs" : [ {
+              "status" : "info",
+              "place" : {
+                "filePath" : "specs/common.spec",
+                "lineNumber" : 69
+              },
+              "name" : "width 48 to 50% of screen/width",
+              "highlight" : [ "menu-item-2" ]
+            }, {
+              "status" : "info",
+              "place" : {
+                "filePath" : "specs/common.spec",
+                "lineNumber" : 73
+              },
+              "name" : "above menu-item-4 0 to 5px",
+              "highlight" : [ "menu-item-2", "menu-item-4" ]
+            } ]
+          }, {
+            "name" : "menu-item-3",
+            "specs" : [ {
+              "status" : "info",
+              "place" : {
+                "filePath" : "specs/common.spec",
+                "lineNumber" : 69
+              },
+              "name" : "width 48 to 50% of screen/width",
+              "highlight" : [ "menu-item-3" ]
+            }, {
+              "status" : "info",
+              "place" : {
+                "filePath" : "specs/common.spec",
+                "lineNumber" : 77
+              },
+              "name" : "near menu-item-4  0 to 5 px left",
+              "highlight" : [ "menu-item-3", "menu-item-4" ]
+            } ]
+          }, {
+            "name" : "menu-item-4",
+            "specs" : [ {
+              "status" : "info",
+              "place" : {
+                "filePath" : "specs/common.spec",
+                "lineNumber" : 69
+              },
+              "name" : "width 48 to 50% of screen/width",
+              "highlight" : [ "menu-item-4" ]
+            } ]
+          } ]
+        }, {
+          "name" : "Content",
+          "objects" : [ {
+            "name" : "content",
+            "specs" : [ {
+              "status" : "info",
+              "place" : {
+                "filePath" : "specs/common.spec",
+                "lineNumber" : 83
+              },
+              "name" : "below menu ~ 0px",
+              "highlight" : [ "content", "menu" ]
+            }, {
+              "status" : "info",
+              "place" : {
+                "filePath" : "specs/common.spec",
+                "lineNumber" : 84
+              },
+              "name" : "centered horizontally inside screen 1px",
+              "highlight" : [ "content", "screen" ]
+            } ]
+          } ]
+        }, {
+          "name" : "Footer",
+          "objects" : [ {
+            "name" : "footer",
+            "specs" : [ {
+              "status" : "info",
+              "place" : {
+                "filePath" : "specs/common.spec",
+                "lineNumber" : 94
+              },
+              "name" : "height ~ 200px",
+              "highlight" : [ "footer" ]
+            }, {
+              "status" : "info",
+              "place" : {
+                "filePath" : "specs/common.spec",
+                "lineNumber" : 95
+              },
+              "name" : "below content 0px",
+              "highlight" : [ "footer", "content" ]
+            } ]
+          } ]
+        }, {
+          "name" : "Login box",
+          "objects" : [ {
+            "name" : "login-box",
+            "specs" : [ {
+              "status" : "info",
+              "place" : {
+                "filePath" : "specs/loginPage.spec",
+                "lineNumber" : 17
+              },
+              "name" : "centered horizontally inside content 1px",
+              "highlight" : [ "login-box", "content" ]
+            }, {
+              "status" : "info",
+              "place" : {
+                "filePath" : "specs/loginPage.spec",
+                "lineNumber" : 18
+              },
+              "name" : "below menu 20 to 45px",
+              "highlight" : [ "login-box", "menu" ]
+            }, {
+              "status" : "info",
+              "place" : {
+                "filePath" : "specs/loginPage.spec",
+                "lineNumber" : 67
+              },
+              "name" : "inside screen ~ 20px left right",
+              "highlight" : [ "login-box", "screen" ]
+            } ]
+          }, {
+            "name" : "login-caption",
+            "specs" : [ {
+              "status" : "info",
+              "place" : {
+                "filePath" : "specs/loginPage.spec",
+                "lineNumber" : 21
+              },
+              "name" : "height 20 to 35px",
+              "highlight" : [ "login-caption" ]
+            }, {
+              "status" : "info",
+              "place" : {
+                "filePath" : "specs/loginPage.spec",
+                "lineNumber" : 22
+              },
+              "name" : "text is \"Login\"",
+              "highlight" : [ "login-caption" ]
+            }, {
+              "status" : "info",
+              "place" : {
+                "filePath" : "specs/loginPage.spec",
+                "lineNumber" : 73
+              },
+              "name" : "inside login-box 0px top, 0px left",
+              "highlight" : [ "login-caption", "login-box" ]
+            } ]
+          }, {
+            "name" : "username-textfield",
+            "specs" : [ {
+              "status" : "info",
+              "place" : {
+                "filePath" : "specs/loginPage.spec",
+                "lineNumber" : 25
+              },
+              "name" : "height 25 to 35 px",
+              "highlight" : [ "username-textfield" ]
+            }, {
+              "status" : "info",
+              "place" : {
+                "filePath" : "specs/loginPage.spec",
+                "lineNumber" : 28
+              },
+              "name" : "below login-caption 5 to 15px",
+              "highlight" : [ "username-textfield", "login-caption" ]
+            }, {
+              "status" : "info",
+              "place" : {
+                "filePath" : "specs/loginPage.spec",
+                "lineNumber" : 29
+              },
+              "name" : "aligned vertically all password-textfield",
+              "highlight" : [ "username-textfield", "password-textfield" ]
+            }, {
+              "status" : "info",
+              "place" : {
+                "filePath" : "specs/loginPage.spec",
+                "lineNumber" : 70
+              },
+              "name" : "inside login-box 0px left right",
+              "highlight" : [ "username-textfield", "login-box" ]
+            } ]
+          }, {
+            "name" : "password-textfield",
+            "specs" : [ {
+              "status" : "info",
+              "place" : {
+                "filePath" : "specs/loginPage.spec",
+                "lineNumber" : 25
+              },
+              "name" : "height 25 to 35 px",
+              "highlight" : [ "password-textfield" ]
+            }, {
+              "status" : "info",
+              "place" : {
+                "filePath" : "specs/loginPage.spec",
+                "lineNumber" : 32
+              },
+              "name" : "below username-textfield 5 to 15px",
+              "highlight" : [ "password-textfield", "username-textfield" ]
+            }, {
+              "status" : "info",
+              "place" : {
+                "filePath" : "specs/loginPage.spec",
+                "lineNumber" : 33
+              },
+              "name" : "aligned vertically left login-button",
+              "highlight" : [ "password-textfield", "login-button" ]
+            }, {
+              "status" : "info",
+              "place" : {
+                "filePath" : "specs/loginPage.spec",
+                "lineNumber" : 70
+              },
+              "name" : "inside login-box 0px left right",
+              "highlight" : [ "password-textfield", "login-box" ]
+            } ]
+          }, {
+            "name" : "login-button",
+            "specs" : [ {
+              "status" : "info",
+              "place" : {
+                "filePath" : "specs/loginPage.spec",
+                "lineNumber" : 36
+              },
+              "name" : "height 40 to 50 px",
+              "highlight" : [ "login-button" ]
+            }, {
+              "status" : "info",
+              "place" : {
+                "filePath" : "specs/loginPage.spec",
+                "lineNumber" : 39
+              },
+              "name" : "text is \"Login\"",
+              "highlight" : [ "login-button" ]
+            }, {
+              "status" : "info",
+              "place" : {
+                "filePath" : "specs/loginPage.spec",
+                "lineNumber" : 76
+              },
+              "name" : "inside login-box 0px left right",
+              "highlight" : [ "login-button", "login-box" ]
+            }, {
+              "status" : "info",
+              "place" : {
+                "filePath" : "specs/loginPage.spec",
+                "lineNumber" : 77
+              },
+              "name" : "above cancel-button  4 to 10px",
+              "highlight" : [ "login-button", "cancel-button" ]
+            }, {
+              "status" : "info",
+              "place" : {
+                "filePath" : "specs/loginPage.spec",
+                "lineNumber" : 78
+              },
+              "name" : "aligned vertically all cancel-button",
+              "highlight" : [ "login-button", "cancel-button" ]
+            } ]
+          }, {
+            "name" : "cancel-button",
+            "specs" : [ {
+              "status" : "info",
+              "place" : {
+                "filePath" : "specs/loginPage.spec",
+                "lineNumber" : 36
+              },
+              "name" : "height 40 to 50 px",
+              "highlight" : [ "cancel-button" ]
+            }, {
+              "status" : "info",
+              "place" : {
+                "filePath" : "specs/loginPage.spec",
+                "lineNumber" : 42
+              },
+              "name" : "text is \"Cancel\"",
+              "highlight" : [ "cancel-button" ]
+            } ]
+          } ]
+        } ],
+        "objects" : {
+          "menu-item-4" : {
+            "area" : [ 179, 134, 176, 64 ]
+          },
+          "screen" : {
+            "area" : [ 0, 0, 360, 798 ]
+          },
+          "login-button" : {
+            "area" : [ 20, 379, 320, 45 ]
+          },
+          "menu" : {
+            "area" : [ 0, 70, 360, 128 ]
+          },
+          "cancel-button" : {
+            "area" : [ 20, 434, 320, 45 ]
+          },
+          "password-textfield" : {
+            "area" : [ 20, 325, 320, 34 ]
+          },
+          "login-caption" : {
+            "area" : [ 20, 238, 320, 33 ]
+          },
+          "menu-item-1" : {
+            "area" : [ 0, 70, 176, 64 ]
+          },
+          "header" : {
+            "area" : [ 0, 0, 360, 69 ]
+          },
+          "menu-item-2" : {
+            "area" : [ 179, 70, 176, 64 ]
+          },
+          "menu-item-3" : {
+            "area" : [ 0, 134, 176, 64 ]
+          },
+          "content" : {
+            "area" : [ 0, 198, 360, 400 ]
+          },
+          "footer" : {
+            "area" : [ 0, 598, 360, 200 ]
+          },
+          "header-logo" : {
+            "area" : [ 0, 13, 48, 48 ]
+          },
+          "username-textfield" : {
+            "area" : [ 20, 281, 320, 34 ]
+          },
+          "header-text" : {
+            "area" : [ 70, 20, 260, 39 ]
+          },
+          "login-box" : {
+            "area" : [ 20, 238, 320, 241 ]
+          }
+        },
+        "screenshot" : "layout-4-screenshot.png",
+        "type" : "layout"
+      } ],
+      "time" : 1448108351536,
+      "type" : "node"
+    }, {
+      "name" : "Checking error box",
+      "status" : "info",
+      "nodes" : [ {
+        "name" : "Type \"qweqwe\" to username on Login page",
+        "status" : "info",
+        "nodes" : [ {
+          "name" : "css: input[name='login.username']",
+          "type" : "text"
+        } ],
+        "time" : 1448108362363,
+        "type" : "node"
+      }, {
+        "name" : "Click loginButton on Login page",
+        "status" : "info",
+        "nodes" : [ {
+          "name" : "css: button.button-login",
+          "type" : "text"
+        } ],
+        "time" : 1448108362727,
+        "type" : "node"
+      }, {
+        "name" : "Check layout: specs/loginPage-withErrorMessage.spec included tags: mobile",
+        "status" : "info",
+        "time" : 1448108364614,
+        "includedTags" : [ "mobile" ],
+        "sections" : [ {
+          "name" : "Error message",
+          "objects" : [ {
+            "name" : "error-message",
+            "specs" : [ {
+              "status" : "info",
+              "place" : {
+                "filePath" : "specs/loginPage-withErrorMessage.spec",
+                "lineNumber" : 12
+              },
+              "name" : "below password-textfield 5 to 15px",
+              "highlight" : [ "error-message", "password-textfield" ]
+            }, {
+              "status" : "info",
+              "place" : {
+                "filePath" : "specs/loginPage-withErrorMessage.spec",
+                "lineNumber" : 13
+              },
+              "name" : "height ~ 52px",
+              "highlight" : [ "error-message" ]
+            }, {
+              "status" : "info",
+              "place" : {
+                "filePath" : "specs/loginPage-withErrorMessage.spec",
+                "lineNumber" : 14
+              },
+              "name" : "aligned vertically all password-textfield",
+              "highlight" : [ "error-message", "password-textfield" ]
+            }, {
+              "status" : "info",
+              "place" : {
+                "filePath" : "specs/loginPage-withErrorMessage.spec",
+                "lineNumber" : 15
+              },
+              "name" : "above login-button 10 to 30px",
+              "highlight" : [ "error-message", "login-button" ]
+            }, {
+              "status" : "info",
+              "place" : {
+                "filePath" : "specs/loginPage-withErrorMessage.spec",
+                "lineNumber" : 20
+              },
+              "name" : "aligned vertically all login-button",
+              "highlight" : [ "error-message", "login-button" ]
+            } ]
+          } ]
+        } ],
+        "objects" : {
+          "login-button" : {
+            "area" : [ 20, 451, 320, 45 ]
+          },
+          "error-message" : {
+            "area" : [ 20, 369, 320, 52 ]
+          },
+          "password-textfield" : {
+            "area" : [ 20, 325, 320, 34 ]
+          }
+        },
+        "screenshot" : "layout-5-screenshot.png",
+        "type" : "layout"
+      } ],
+      "time" : 1448108362363,
+      "type" : "node"
+    }, {
+      "name" : "Screenshot",
+      "status" : "info",
+      "attachments" : [ "file-6-Screenshot" ],
+      "time" : 1448108364614,
+      "type" : "node"
+    } ]
+  }
+}

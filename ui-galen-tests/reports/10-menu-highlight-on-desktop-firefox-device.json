@@ -1,0 +1,86 @@
+{
+  "testId" : "10-menu-highlight-on-desktop-firefox-device",
+  "name" : "Menu Highlight on desktop firefox device",
+  "report" : {
+    "nodes" : [ {
+      "name" : "Checking color for menu item",
+      "status" : "info",
+      "nodes" : [ {
+        "name" : "Check layout: specs/menuHighlight.spec included tags: usual",
+        "status" : "error",
+        "time" : 1448108518479,
+        "includedTags" : [ "usual" ],
+        "sections" : [ {
+          "name" : "Menu highlight",
+          "objects" : [ {
+            "name" : "menu-item-1",
+            "specs" : [ {
+              "status" : "error",
+              "place" : {
+                "filePath" : "specs/menuHighlight.spec",
+                "lineNumber" : 8
+              },
+              "name" : "color-scheme  0% #2d6ca2, 1 to 4 % white",
+              "errors" : [ "color #2d6ca2 on \"menu-item-1\" is 14% instead of 0%" ],
+              "highlight" : [ "menu-item-1" ]
+            } ]
+          } ]
+        } ],
+        "objects" : {
+          "menu-item-1" : {
+            "area" : [ 90, 70, 100, 64 ]
+          }
+        },
+        "screenshot" : "layout-22-screenshot.png",
+        "type" : "layout"
+      } ],
+      "time" : 1448108517894,
+      "type" : "node"
+    }, {
+      "name" : "Checking color for highlighted menu item",
+      "status" : "info",
+      "nodes" : [ {
+        "name" : "Hover first menu item",
+        "status" : "info",
+        "time" : 1448108518479,
+        "type" : "node"
+      }, {
+        "name" : "Check layout: specs/menuHighlight.spec included tags: hovered",
+        "status" : "error",
+        "time" : 1448108519155,
+        "includedTags" : [ "hovered" ],
+        "sections" : [ {
+          "name" : "Menu highlight",
+          "objects" : [ {
+            "name" : "menu-item-1",
+            "specs" : [ {
+              "status" : "error",
+              "place" : {
+                "filePath" : "specs/menuHighlight.spec",
+                "lineNumber" : 14
+              },
+              "name" : "color-scheme 0% #205380, 1 to 4 % white",
+              "errors" : [ "color #205380 on \"menu-item-1\" is 6% instead of 0%" ],
+              "highlight" : [ "menu-item-1" ]
+            } ]
+          } ]
+        } ],
+        "objects" : {
+          "menu-item-1" : {
+            "area" : [ 90, 70, 100, 64 ]
+          }
+        },
+        "screenshot" : "layout-23-screenshot.png",
+        "type" : "layout"
+      } ],
+      "time" : 1448108518479,
+      "type" : "node"
+    }, {
+      "name" : "Screenshot",
+      "status" : "info",
+      "attachments" : [ "file-24-Screenshot" ],
+      "time" : 1448108519156,
+      "type" : "node"
+    } ]
+  }
+}
