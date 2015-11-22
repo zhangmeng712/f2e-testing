@@ -411,7 +411,7 @@ describe('test page of taobao search', function () {
 
 
 ## ReactTesting Demo
--  <a href="react/test/" target="_blank">UI tesing by wd.js</a>
+- <a href="react/test/" target="_blank">UI tesing by wd.js</a>
 - Page Object Pattern
 - react-test-tree
 
