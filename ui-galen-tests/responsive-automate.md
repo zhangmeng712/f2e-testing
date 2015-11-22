@@ -312,13 +312,15 @@ node . -a 127.0.0.1 -p 8002 -U 4df752b06833bfd3 --browser-name Chrome --no-reset
 node . -a 127.0.0.1 -p 8001 --command-timeout 50000  --no-reset
 selenium-standalone start
 
+```
+
 #客户端：测试 并且测试完成后浏览器打开测试结果
 
 Galen的命令行运行，<a href="http://galenframework.com/docs/reference-working-in-command-line/" target="_blank">参考</a>
 
 - galen check：运行spec
 - galen test： 运行测试用例
-- galen dump：生成可视化spec
+- galen dump：生成可视化spec- 
 
 ```shell
 galen test mytest01.test
