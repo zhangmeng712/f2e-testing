@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>sinon backbone test</title>
+
+    <link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/mocha/2.3.4/mocha.css">
+    <script src="//cdn.bootcss.com/mocha/2.3.4/mocha.js"></script>
+    <script src="//cdn.bootcss.com/chai/3.4.1/chai.js"></script>
+    <script src="//cdn.bootcss.com/sinon.js/1.15.4/sinon.js"></script>
+    <script src="../node_modules/sinon-chai/lib/sinon-chai.js"></script>
+
+    <script src="//cdn.bootcss.com/underscore.js/1.6.0/underscore.js"></script>
+    <script src="//cdn.bootcss.com/backbone.js/1.1.2/backbone.js"></script>
+
+</head>
+<body>
+<script>
+    var expect = chai.expect;
+    mocha.setup("bdd");
+    window.onload = function () {
+        (window.mochaPhantomJS || mocha).run();
+    };
+</script>
+<script src="sinon-test.js"></script>
+<div id="mocha"></div>
+</body>
+</html>

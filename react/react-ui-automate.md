@@ -1,7 +1,8 @@
-# React UI自动化测试
+# React UI自动化测试（一）
 
-前面的blog介绍了<a href="http://dj1211.com/?p=571" target="_blank">《前端UI自动化测试》</a>，有关UI测试的方方面面，这篇文章主要是通过实践的方式，使用里面提到的技术来进行对React组件的测试。
-
+前面的blog介绍了<a href="http://dj1211.com/?p=571" target="_blank">《前端UI自动化测试》</a>，有关UI测试的方方面面，这篇文章主要是通过实践的方式，使用里面提到的技术来进行对React组件和APP进行测试。从最基本的React组件开发到部署再到自动化测试。
+- React UI自动化测试（一）通过实例
+- React UI自动化测试（二）
 
 ## 一个React程序
 
