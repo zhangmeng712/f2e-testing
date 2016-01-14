@@ -108,6 +108,7 @@ suite('with two selected items', function() {
 ```
 
 ## google map component测试实例
+- 代码参考，<a href="https://github.com/zhangmeng712/f2e-testing/tree/master/un-tests/tests/polymer/test" target="_blank">f2e test</a>
 - 1、安装 web-components-tester： npm install -g web-component-tester
 - 2 建立test文件夹（默认地址）
     - 2.1 index.html

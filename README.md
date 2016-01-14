@@ -32,7 +32,7 @@ describe("A suite", function() {
 ### Karma
 ### Protractor(for Angular Testing)
 ### Jest (for React Testing)
-### Web-component-tester (for Polymer testing)
+### Web-component-tester (for Polymer testing)<a href="https://github.com/zhangmeng712/f2e-testing/blob/master/un-tests/unit-polymer.md">wct单元测试使用实践</a>
 
 ## UI Testing Strategy
 
