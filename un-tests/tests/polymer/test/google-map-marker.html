@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Test polymer google-map-marker</title>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+    <script src="../bower_components/webcomponentsjs/webcomponents.js"></script>
+    <script src="../bower_components/web-component-tester/browser.js"></script>
+    <link rel="import"  href="../bower_components/iron-test-helpers/iron-test-helpers.html">
+    <link rel="import" href="../google-map.html">
+</head>
+<body>
+<google-map id="map" latitude="37.77493" longitude="-122.41942">
+    <google-map-marker latitude="37.779" longitude="-122.3892"><div>THIS IS SAN FRANCISCO</div></google-map-marker>
+    <google-map-marker latitude="37.577" longitude="-122.3661"></google-map-marker>
+    <google-map-marker latitude="37.879" longitude="-122.3472"></google-map-marker>
+</google-map>
+<script src="marker.js"></script>
+</body>
+</html>
