@@ -31,7 +31,7 @@ describe("A suite", function() {
 ## Testing Tools
 ### Karma
 ### Protractor(for Angular Testing)
-### Jest (for React Testing)
+### Jest (for React Testing)<a href="https://github.com/zhangmeng712/f2e-testing/blob/master/un-tests/unit-react.md">jest单元测试使用实践</a>
 ### Web-component-tester (for Polymer testing)<a href="https://github.com/zhangmeng712/f2e-testing/blob/master/un-tests/unit-polymer.md">wct单元测试使用实践</a>
 
 ## UI Testing Strategy
