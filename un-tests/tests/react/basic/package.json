@@ -1,0 +1,28 @@
+{
+  "name": "jest-test-examples",
+  "version": "0.0.1",
+  "dependencies": {
+    "react": "~0.14.0",
+    "react-dom": "^0.14.6"
+  },
+  "devDependencies": {
+    "babel-jest": "^5.3.0",
+    "jest-cli": "*",
+    "jquery": "^2.2.0",
+    "react-addons-test-utils": "~0.14.0"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
+    "unmockedModulePathPatterns": [
+      "<rootDir>/node_modules/react",
+      "<rootDir>/node_modules/react-dom",
+      "<rootDir>/node_modules/react-addons-test-utils"
+    ],
+    "modulePathIgnorePatterns": [
+      "<rootDir>/node_modules/"
+    ]
+  }
+}

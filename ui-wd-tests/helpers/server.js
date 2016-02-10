@@ -13,17 +13,17 @@ module.exports.default = {
 };
 
 //Appium server
-//module.exports.appium = {
-//    host: 'localhost',
-//    port: 4723
-//};
-
 module.exports.appium = {
-    protocol: 'http:',
-    hostname: '127.0.0.1',
-    port: 8001,
-    path: '/wd/hub'
-}
+    host: 'localhost',
+    port: 4723
+};
+
+//module.exports.appium = {
+//    protocol: 'http:',
+//    hostname: '127.0.0.1',
+//    port: 8001,
+//    path: '/wd/hub'
+//}
 
 //need other windows platform to install ie driver
 module.exports.ie = {

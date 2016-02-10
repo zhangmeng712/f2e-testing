@@ -4,3 +4,7 @@ ui-client/node_modules/
 react/node_modules/
 basic/node_modules/
 selenium-standalone/node_modules/
+un-tests/tests/react/app/node_modules/
+un-tests/tests/react/basic/node_modules/
+
+
