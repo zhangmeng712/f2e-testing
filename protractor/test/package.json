@@ -1,0 +1,10 @@
+{
+  "name": "application-name",
+  "version": "0.0.1",
+  "dependencies": {
+    "grunt": "",
+    "grunt-concurrent": "",
+    "load-grunt-tasks": "",
+    "grunt-protractor-runner": ""
+  }
+}
