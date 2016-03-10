@@ -147,9 +147,7 @@ protractor内置方法测试angular的程序,例如它会自动检测angular页�
     - 2 添加 browser.driver.ignoreSynchronization = true 
 <a href="https://github.com/sakshisingla/Protractor-Non-Angular-Tests/wiki/Creating-test-scripts-using-Protractor-for-non-angular-application" target="_blank">参考</a>
 
-### 参考代码
 
-<a href="">参见</a>
 
 ## protractor的详细使用
 
@@ -229,7 +227,6 @@ protractor内置方法测试angular的程序,例如它会自动检测angular页�
 ```
 
 
-
 ## page object pattern
 
 page object的模式大家一定不陌生,通过合理的配置可以使测试代码更容易维护,举例来说可以这样:
@@ -274,7 +271,7 @@ describe('angularjs homepage', function() {
 
 ## 参考代码
 
-本文的参考代码见 <a href="" target="_blank">Github</a>
+本文的参考代码见 <a href="https://github.com/zhangmeng712/f2e-testing/tree/master/protractor" target="_blank">Github</a>
 
 
  
