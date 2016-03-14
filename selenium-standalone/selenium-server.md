@@ -1,6 +1,8 @@
 # selenium-standalone
 
 ## 介绍
+
+参考<a href="http://www.guru99.com/introduction-to-selenium-grid.html">Introduction to Selenium Grid<a>
 <img src="http://inetfuture.com/2015/03/18/selenium-terms-explained/grid-architecture.png">
 ## 安装
 [selenium-standalone](https://www.npmjs.com/package/selenium-standalone)支持node安装方式,通过下列脚本可以安装执行，同时可以配置对应的hub信息。
@@ -56,3 +58,30 @@ this.server_ = new remote.SeleniumServer(this.config_.seleniumServerJar, serverC
     });
   });
 ```
+
+## webdriver连接selenium-server
+
+```javascript
+//以wd.js为例
+var wd = require("wd");
+
+var driver = wd.promiseChainRemote({
+    protocol: 'http:',
+    hostname: '127.0.0.1',
+    port: '4444',
+    path: '/wd/hub'
+});
+
+driver
+    .init({browserName: 'safari'})
+    .get('http://www.baidu.com')
+    .sleep(5000)
+    .title().then(function (title){
+        console.log('this is the website title', title)
+    })
+    .quit()
+    .done();
+
+```
+
+
