@@ -1,9 +1,10 @@
 # selenium-standalone
 
 ## 介绍
-
+<img src="http://inetfuture.com/2015/03/18/selenium-terms-explained/grid-architecture.png">
 ## 安装
 [selenium-standalone](https://www.npmjs.com/package/selenium-standalone)支持node安装方式,通过下列脚本可以安装执行，同时可以配置对应的hub信息。
+启动后访问http://localhost:4444/wd/hub即可看到创建的hub信息
    
 ```shell
 	npm install selenium-standalone@latest -g
@@ -15,8 +16,9 @@
   - ie：selenium-standalone install --drivers.chrome.version=2.15 --drivers.chrome.baseURL=http://chromedriver.storage.googleapis.com
 
 由于jar"墙"无法下载chromedriver以及selenium.jar,所以npm install selenium-standalone@latest -g 安装完成后,建立文件夹.selenium,并拷贝下面两个文件夹到目录下即可
-http://pan.baidu.com/s/1dEeLDrr
-http://pan.baidu.com/s/1dEssRWP
+  
+   - chromedirver http://pan.baidu.com/s/1dEeLDrr
+   - seleniumjar http://pan.baidu.com/s/1dEssRWP
 
 
 ## program启动
