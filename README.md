@@ -79,7 +79,7 @@ UI测试框架主要由两部分构成：客户端的Test环境和测试服务�
 
    - UI测试服务器
        - <a href="selenium-standalone/selenium-server.md">selenium-standalone详解</a>
-       - mobile端:Appium详解
+       - mobile端:<a href="appium/README.md">Appium详解</a>
    - UI测试脚本框架
        - wd.js详解
        - selenium-webdriver和protractor
