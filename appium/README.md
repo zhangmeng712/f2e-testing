@@ -1,26 +1,30 @@
-# Appium的源码编译安装（mac 平台）
+# Appium
 
-Appium是现在比较活跃的开源自动化测试平台，因为更新速度很快，建议编译安装，了解其更多有意思的功能。
-Appium支持ios android selendroid的自动化测试。在mac下配置ios环境还是相对简单的，但是android真机的配置就不是那么简单了，在此详细记录基于源码的编译安装。
+##简介	
 
+mobile端的开发越来越火热，为了保证开发质量，也有很多针对移动端的测试工具应运而生。<a href="http://appium.io" target="_blank">Appium</a>就是其中很活跃的开源框架。本质上它包括两部分内容：
 
-## 准备工作 node
-- git clone https://github.com/appium/appium.git
-- 安装好node环境（brew安装最好）
-- 安装 mocha 和grunt-cli
+- 基于express的server用于发送/接收client端的协议命令
+- 作为bootstrap客户端用于将命令传递给对应的UIAutomator/UIAutomation/Google’s Instrumentation
 
-```shell
-npm install -g mocha
-npm install -g grunt-cli
-```
+Appium最大的特色就是<strong>支持ios/android/firefoxos多种平台的测试，native、h5、hybrid都支持，以及所有支持jsonWireProtocal协议的脚本语言：python，java，nodejs ruby都可以用来书写用例</strong>。
 
+## architecture
 
-## android真机配置
+ios
+<img src="http://www.3pillarglobal.com/sites/default/files/appium1.png">
+
+android
+<img src="http://www.3pillarglobal.com/sites/default/files/appium2.png">
+
+## 安装
+
+### android真机
 
 因为android虚拟器跑起来非常慢，如果不是专业的android的开发，安装跑andorid studio环境也没有必要
 有对应的apk和sdk使用真机就能跑我们的测试脚本了。
 
-### 准备工作：
+#### 准备工作：
 - 安装java jdk 配置JAVA_HOME
 - 安装android jdk，可以在线安装（国内速度超慢），所以快捷的方式是下载adt-bundle，解压后直接可用，<a href="https://dl.google.com/android/adt/adt-bundle-mac-x86_64-20140702.zip" target="_blank">下载地址</a>
 - 配置ANDROID_HOME
@@ -40,7 +44,7 @@ export PATH=$JAVA_HOME/bin:$PATH
 
 ![](http://gtms04.alicdn.com/tps/i4/TB1d.8kKXXXXXXFaXXXHH2ZNpXX-822-195.jpg)
 
-### 配置手机
+#### 配置手机
 
 - 开启开发者选项，设置-{}开发者选项，如果没有找到，<a href="http://android.d.cn/news/83907.html" target="_blank">参考</a>
 - 打开USB调试（如下图）
@@ -57,9 +61,9 @@ adb devices
 其中list出来的就是手机的udid，用于后面的测试使用，如下图
 ![](http://gtms03.alicdn.com/tps/i3/TB1diXtKXXXXXXMXVXXct.03pXX-675-79.jpg)
 
-### 执行初始化脚本
+#### 执行初始化脚本
 
-按照上面的步骤执行完成之后，运行命令./reset.sh --andorid --verbose即可。
+按照上面的步骤执行完成之后，运行命令<strong>./reset.sh --andorid --verbose</strong>即可。
 在没有读这个reset.sh脚本的时候真的是被各种的环境搞的头晕脑胀，各种报错，包括：
 基本都是有命令运行不通造成的，所以在这里大概介绍一下在appium reset android中的到底做了些什么，帮助大家理解这个启动脚本，以便配合自己的应用解决编译的问题，这个也是源码编译的好处之一，可以及时的解决更新服务。
 
@@ -69,7 +73,7 @@ adb devices
 
 <img src="http://gtms03.alicdn.com/tps/i3/TB1WaXHKXXXXXb6XpXXeOeo8FXX-750-1000.jpg" width="300px" height="500px">
 
-### reset.sh分析
+#### reset.sh分析
 
 ```shell
 
@@ -114,45 +118,20 @@ reset_android() {
 - 更新appium的版本号
 - reset_chromedriver 详情<a href="https://github.com/appium/appium-chromedriver">参考</a>
 
-### 运行测试用例
 
-- node . -U  4df752b06833bfd3 （显示下面的提示证明Appium Server能够正常启动）
+#### 运行测试用例
+
+- <strong>node . -U  4df752b06833bfd3</strong>（显示下面的提示证明Appium Server能够正常启动）
 - 详细的运行参数<a href="https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md" target="_blank">参考</a>
 - 运行测试用例 : mocha wd-android-helloworld.js （<a href="https://github.com/admc/wd" target="_blank">wd.js</a>）
 - 其中支持原生的browser、chrome、还有apk的测试
 
 ![](http://gtms04.alicdn.com/tps/i4/TB11TKIKXXXXXbaXXXX_k.yPXXX-795-103.jpg)
 
-```javascript
-var wd = require("wd");
-var driver = wd.promiseChainRemote({
-    host: 'localhost',
-    port: 4723
-});
 
-driver
-    .init({
-        browserName: 'Chrome',//Chrome or Browser(原生，默认主页是google建议最好翻墙不然卡住)
-        platformName: 'Android',
-        platformVersion: '4.4.4',
-        deviceName: 'Android Emulator'
-      //,app: '/Users/zhangmeng/Downloads/com.taobao.taobao-5.3.1-121.apk' //如果选择测试app的内容 browserName设置为'';
-      //执行app后会把对应的apk安装到真机中
-    })
-    .get('http://www.baidu.com')
-    .sleep(5000)
-    .title().then(function (title){
-        console.log('this is the website title', title)
-    })
-    .quit()
-    .done();
+### ios虚拟器
 
-```
-
-## ios 虚拟器配置
-
-### 配置和启动服务
-
+ 配置IOS环境:xcode安装好,执行如下命令:
 ```shell
 $ git clone https://github.com/appium/appium.git
 $ cd appium
@@ -161,13 +140,63 @@ $ sudo ./bin/authorize-ios.js # for ios only 修改权限
 $ node .
 ```
 
-### 测试脚本
+### 启动参数
+有时需要配置一些特殊的启动参数,例如想启动safari进行H5页面的测试,那样就可以使用 node . --safari 启动参数实现,
+如果需要详细的server启动配置，请参考<a href="https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md" target="_blank">Appium server arguments</a>，例如 只想实现针对safari进行h5页面的自动化测试，配置参数为：
 
-参见 <a href="https://github.com/zhangmeng712/f2e-testing/blob/master/ui-wd-tests/mobile/safari-wd-search-test.js" target="_blank">safari-wd-search-test.js</a>
 
-## 参考
+## 测试脚本
 
-- https://github.com/appium/appium/blob/master/docs/en/contributing-to-appium/appium-from-source.md
-- https://github.com/appium/appium/blob/master/docs/en/contributing-to-appium/grunt.md
-- http://university.utest.com/android-ui-testing-uiautomatorviewer-and-uiautomator/
-- http://developer.android.com/tools/help/shell.html
+node . 启动完appium后, 可以通过支持jsonWireProtocal的客户端连接服务器进行测试,具体的测试程序 <a href="https://github.com/zhangmeng712/f2e-testing/tree/master/ui-wd-tests/mobile">参考</a>
+
+```javascript
+require('../helpers/setup');
+var wd = require("wd");
+var serverConfig = require('../helpers/server').appium;
+var desired = require('../helpers/caps').ios90s;
+var begin_page_url = 'http://s.m.taobao.com/h5?search-btn=&event_submit_do_new_search_auction=1&_input_charset=utf-8&topSearch=1&atype=b&searchfrom=1&action=home%3Aredirect_app_action&from=1';
+
+describe('test page of taobao search', function () {
+    this.timeout(300000);
+    var driver;
+    before(function () {
+    //配置appium需要的配置
+        driver = wd.promiseChainRemote({
+            host: 'localhost',
+            port: 4723
+        });
+        require("../helpers/logger").configure(driver);//显示日志
+        return driver.init({
+            'appiumVersion': '1.4.11',
+            'deviceName': 'iPhone 6',
+            'device-orientation': 'portrait',
+            'platformVersion': '9.1',
+            'platformName': 'iOS',
+            'app': 'safari'
+        });
+    });
+
+    after(function () {
+        return driver.quit();
+    });
+
+    //1打开淘宝搜索页面
+    //2点击搜索框
+    //3进入到搜索结果页面
+    it("should open iphone+6s search page", function () {
+        var inputValue = 'iphone 6s';
+        return driver
+              .get(begin_page_url)
+              .sleep(1000)
+              .waitForElementByName('q', 2000)
+              .sendKeys(inputValue)
+              .waitForElementByName('search')
+              .tap()
+              .sleep(5000)
+              .eval('window.location.href')
+              .should.eventually.include('q=iphone+6s')
+    });
+
+});
+
+```

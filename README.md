@@ -70,11 +70,12 @@
 没人可以否认<strong>UI测试是耗时且昂贵的</strong>，所以在写测试的时候一定要慎重的选择使用UI测试的case，下图就是一种比较“聪明”的UI测试架构。我们可以将UI层进行拆分：<strong>视图层</strong>还有<strong>UI逻辑层</strong>。如果大家知道  MVX 这种架构，就会知道，UI逻辑层更像是 MVX 中的Controller层和Model层，视图层是比较难以测试和描述的，因此不建议将对视图层的内容作为UI测试的重点，当然我们也可以使用简单的spec来描述视图层的内容，或是对于视图的样式等使用 <strong><a href="http://galenframework.com/" target="_blank">galenframework</a></strong>类似的框架进行测试 (后面的blog会专门介绍这个框架，它脱离了<a href="https://github.com/Huddle/PhantomCSS" target="_blank">phantomCss</a>的检测方式，使用特殊的spec方式来描述case，对于前端来说，非常值得学习)。因此我们更多的测试会围绕UI逻辑层进行。UI逻辑层主要的用途如下，因此我们的case就围绕着对这两部分功能的测试进行编写。
    - 用户和浏览器的交互(操作和更新html)
    - 监听html的事件并且将信息通过request传递给后台
-   <img src="http://gtms01.alicdn.com/tps/i1/TB1EoZ_JpXXXXaSXVXXfGCCQVXX-512-362.jpg" width="500px" height="340px">
+   
+<img src="http://gtms01.alicdn.com/tps/i1/TB1EoZ_JpXXXXaSXVXXfGCCQVXX-512-362.jpg" width="500px" height="340px">
    
 UI测试框架主要由两部分构成：客户端的Test环境和测试服务，测试框架的基本原理很简单，本着经济有效的原则，设计了这款使用开源技术的UI测试框架，跨平台、支持多语言、且支持PC端和mobile端的测试方案，本人是前端，所以下例都是基于Nodejs/javascript书写。
     
-    ![](http://gtms01.alicdn.com/tps/i1/TB14RaGJFXXXXcVXpXXYZLw5FXX-556-445.jpeg)
+   ![](http://gtms01.alicdn.com/tps/i1/TB14RaGJFXXXXcVXpXXYZLw5FXX-556-445.jpeg)
 
    - UI测试服务器
        - <a href="selenium-standalone/selenium-server.md">selenium-standalone详解</a>
