@@ -202,6 +202,7 @@ describe('test page of taobao search', function () {
 ```
 
 结果如下图
+
 ![](http://gtms01.alicdn.com/tps/i1/TB16UnuJFXXXXXbXFXXMWa1RFXX-376-688.jpg)
 
 ![](http://gtms02.alicdn.com/tps/i2/TB1lbDlJFXXXXXBXVXXXiF3VFXX-1379-584.jpg)
